@@ -21,6 +21,7 @@
 
 .menu {
   width: 250rpx;
+  font-size: 24rpx;
 }
 
 .content {

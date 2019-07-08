@@ -389,8 +389,8 @@ const skills = [{
     type: 0
 }, {
     id: 31,
-    name: '文理高速咏唱',
-    name_en: 'wlgsyc',
+    name: '文理高速复唱',
+    name_en: 'wlgsfc',
     icon: '',
     from: [
         [{ fid: 32, num: 1 }, { fid: 37, num: 1 }, { fid: 23, num: 1 }],
@@ -600,8 +600,8 @@ const skills = [{
     type: 0
 }, {
     id: 48,
-    name: '文理魔力爆发',
-    name_en: 'wlmlbf',
+    name: '文理魔法爆发',
+    name_en: 'wlmfbf',
     icon: '',
     from: [
         [{ fid: 48, num: 1 }],
@@ -640,7 +640,7 @@ const skills = [{
 }, {
     id: 51,
     name: '文理探景',
-    name_en: 'wlgz',
+    name_en: 'wltj',
     icon: '',
     from: [
         [{ fid: 10, num: 2 }],
@@ -703,8 +703,8 @@ const skills = [{
     type: 0
 }, {
     id: 56,
-    name: '文理牺牲',
-    name_en: 'wlxs',
+    name: '文理献祭',
+    name_en: 'wlxj',
     icon: '',
     from: [
         [{ fid: 37, num: 1 }, { fid: 39, num: 1 }, { fid: 48, num: 1 }]

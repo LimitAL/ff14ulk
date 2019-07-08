@@ -32,7 +32,7 @@ const crystals = [{
     }
 }, {
     id: 1,
-    name: '治疗',
+    name: '治愈',
     data: [33, 5],
     from: {
         hydatos: [],
@@ -48,7 +48,7 @@ const crystals = [{
     }
 }, {
     id: 1,
-    name: '妨害',
+    name: '妨碍',
     data: [20, 22],
     from: {
         hydatos: [],
