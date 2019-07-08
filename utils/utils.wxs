@@ -1,0 +1,8 @@
+function funcToCN(index) {
+    var arr = ['一', '二', '三', '四'];
+    return arr[index];
+}
+
+module.exports = {
+    funcToCN: funcToCN
+}

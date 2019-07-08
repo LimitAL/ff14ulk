@@ -1,0 +1,98 @@
+/**index.wxss**/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.search {
+  margin: 10rpx 5rpx;
+  padding: 5rpx;
+  border: 2rpx solid #dfdfdf;
+  border-radius: 14rpx;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.menu {
+  width: 250rpx;
+}
+
+.content {
+  padding: 10rpx;
+}
+
+.item {
+  padding: 20rpx 10rpx;
+  border-bottom: 2rpx solid #dfdfdf;
+  border-right: 2rpx solid #dfdfdf;
+}
+
+.content-item {
+  margin-bottom: 40rpx;
+}
+
+.content-item-title {
+  position: relative;
+  margin-left: 40rpx;
+  font-size: 38rpx;
+  font-weight: 300;
+}
+
+.content-item-title::before {
+  content: '';
+  position: absolute;
+  left: -30rpx;
+  top: 0;
+  bottom: 0;
+  border-radius: 14rpx;
+  width: 20rpx;
+  background-color: #2d8cf0;
+}
+
+.content-item-body {
+  margin-left: 30rpx;
+}
+
+.func-item {
+  margin: 10rpx 0;
+  padding: 20rpx;
+  border: 2rpx dashed #ccc;
+  border-radius: 14rpx;
+}
+
+.func-item-child {
+  position: relative;
+  margin: 10rpx 0 0 40rpx;
+}
+
+.skill-source-tootip {
+  position: fixed;
+  width: 200rpx;
+  padding: 20rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 14rpx;
+}
+
+.selected {
+  background-color: #f90;
+  color: #fff;
+}
+
+.jobIcon-container {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx 0;
+}
+
+.jobIcon {
+  margin-right: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}

@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view>
+  <view class="item">
+    <view>文理技能数据来自于NGA最终幻想14分区@缤纷苺圣代 发布的主题帖：</view>
+    <view>“4.55版本 优雷卡喷水之地Hydatos篇 攻略”</view>
+    <view>“4.55版本 优雷卡涌火之地pyros篇 攻略”</view>
+  </view>
+  <view class="item">
+    <view>职业图标来自于</view>
+    <view>“最终幻想XIV中文维基 - 灰机wiki”</view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<wxs src="../../utils/utils.wxs" module="tools" />
+<view class="container" bindtap="onClickGlobal">
+  <!-- 搜索框 -->
+  <view>
+    <input class="search" type="text" confirm-type="search" placeholder="搜索,可输入技能名或首字母,如：xs" bindinput="onInputSearch" />
+  </view>
+  <!-- 主体内容 -->
+  <view class="body">
+    <!-- 左侧列表 -->
+    <scroll-view class="menu" scroll-into-view="{{viewid}}" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-with-animation="false" enable-back-to-top="false">
+      <view id="{{item.name_en}}" class="{{index == current?'selected':''}}" wx:for="{{skills}}" catchtap="onTapMenu" data-index="{{index}}" wx:key="{{item.id}}">
+        <view class="item">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <!-- 右侧详情 -->
+    <view class="content">
+      <view class="content-item">
+        {{content.name}}
+      </view>
+      <view class="content-item">
+        <text class="content-item-title">合成方式</text>
+        <view class="content-item-body">
+          <view class="func-item" wx:for="{{content.from}}" wx:key="{{index}}">
+            <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
+            <view class="func-item-child" wx:for="{{item}}" wx:key="{{item.fid}}" wx:for-item="citem" catchtap="onTapSkill" data-id="{{citem.obj.id}}">
+              {{citem.obj.name}}*{{citem.num}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="content-item">
+        <text class="content-item-title">适用职业</text>
+        <view class="content-item-body jobIcon-container">
+          <view wx:for="{{content.access}}" wx:key="{{index}}">
+            <image class="jobIcon" src="/images/jobType/30px-{{item}}.png" mode="widthFix" lazy-load="false">
+            </image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{searchSource.isShow}}" style="left: {{searchSource.left}}px;top:{{searchSource.top}}px" class="skill-source-tootip">
+  <view>{{searchSource.name}}</view>
+  来自于：{{searchSource.data.name}}
+</view>

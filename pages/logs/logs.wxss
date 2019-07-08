@@ -1,0 +1,3 @@
+.item {
+  padding: 40rpx 20rpx;
+}
