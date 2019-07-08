@@ -16,7 +16,8 @@
     <!-- 右侧详情 -->
     <view class="content">
       <view class="content-item">
-        {{content.name}}
+        <view class="skill-name">{{content.name}}</view>
+        <view class="setLike {{like?'liked':''}}" catchtap="onTapLike">{{like?'已':''}}设为常用</view>
       </view>
       <view class="content-item">
         <text class="content-item-title">合成方式</text>

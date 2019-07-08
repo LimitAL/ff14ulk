@@ -7,6 +7,7 @@ Page({
         viewid: '',
         skills: skills.skills,
         content: {},
+        like: false,
         searchSource: {
             name: '',
             isShow: false,
@@ -20,9 +21,31 @@ Page({
     },
     onShow: function() {
         this.setData({
-            viewid: this.data.skills[this.data.current].name_en
+            viewid: skills.skills[this.data.current].name_en
         });
         this.processContent(this.data.current);
+    },
+    // 初始化
+    init(data) {
+        let res = wx.getStorageSync('likes');
+        if (Reflect.has(res, 'length')) {
+            set(res);
+        } else {
+            set([]);
+        }
+
+        function set(storage) {
+            let result = [];
+            let obj = {};
+            for (let i = 0; i < data.length; i++) {
+                obj = storage.find(item => item == data[i].id);
+                if (obj) {
+                    result.unshift(data[i]);
+                } else {
+                    result.push(data[i]);
+                }
+            }
+        }
     },
     // 点击菜单
     onTapMenu(e) {
@@ -57,6 +80,7 @@ Page({
             current: index,
             content: result
         });
+        this.likeStatusOnload(result.id);
     },
     // 搜索方法
     onInputSearch(e) {
@@ -81,6 +105,7 @@ Page({
         if (result.length > 0) {
             this.processContent(0);
         }
+        this.likeStatusOnload(this.content.id);
     },
     // 查询技能来源
     onTapSkill(e) {
@@ -122,5 +147,83 @@ Page({
                 data: {}
             }
         });
+    },
+    // 设置常用
+    onTapLike() {
+        let _self = this;
+        wx.getStorage({
+            key: 'likes',
+            success: function(res) {
+                let data = res.data;
+                let index = data.findIndex(item => {
+                    return item === _self.data.content.id
+                });
+                if (index > -1) {
+                    data.splice(index, 1);
+                } else {
+                    data.push(_self.data.content.id);
+                }
+                _self.setStorage(data);
+            },
+            fail: function() {
+                // fail
+                let data = [_self.data.content.id];
+                _self.setStorage(data);
+            },
+            complete: function() {
+                // complete
+                _self.setData({
+                    like: !_self.data.like
+                });
+            }
+        })
+    },
+    setStorage(data) {
+        wx.setStorage({
+            key: 'likes',
+            data: data,
+            success: function(res) {
+                // success
+            },
+            fail: function() {
+                // fail
+            },
+            complete: function() {
+                // complete
+            }
+        })
+    },
+    // 常用状态加载
+    likeStatusOnload(current) {
+        let _self = this;
+        wx.getStorage({
+            key: 'likes',
+            success: function(res) {
+                let data = res.data;
+                if (data.length > 0) {
+                    let result = data.findIndex(item => {
+                        return item == current;
+                    });
+                    if (result !== -1) {
+                        _self.setData({
+                            like: true
+                        });
+                    } else {
+                        _self.setData({
+                            like: false
+                        });
+                    }
+                } else {
+                    _self.setData({
+                        like: false
+                    });
+                }
+            },
+            fail: function() {
+                _self.setData({
+                    like: false
+                });
+            }
+        })
     }
 })

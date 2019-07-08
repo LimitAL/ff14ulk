@@ -24,6 +24,7 @@
 }
 
 .content {
+  width: 100%;
   padding: 10rpx;
 }
 
@@ -34,6 +35,7 @@
 }
 
 .content-item {
+  width: 100%;
   margin-bottom: 40rpx;
 }
 
@@ -42,6 +44,30 @@
   margin-left: 40rpx;
   font-size: 38rpx;
   font-weight: 300;
+  width: 100%;
+}
+
+.skill-name,
+.setLike {
+  padding: 10rpx 20rpx;
+  border-radius: 14rpx;
+}
+
+.skill-name {
+  display: inline-block;
+  border: 2rpx solid #009688;
+  color: #009688;
+}
+
+.setLike {
+  float: right;
+  background-color: #f90;
+  color: #fff;
+}
+
+.liked {
+  background-color: #dfdfdf;
+  color: #999;
 }
 
 .content-item-title::before {
@@ -81,7 +107,7 @@
 }
 
 .selected {
-  background-color: #f90;
+  background-color: #2db7f5;
   color: #fff;
 }
 
