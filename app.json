@@ -20,9 +20,9 @@
             "selectedIconPath": "/images/tabBar/skill-selected.png"
         }, {
             "pagePath": "pages/baimage/baimage",
-            "text": "BA",
-            "iconPath": "/images/tabBar/skill.png",
-            "selectedIconPath": "/images/tabBar/skill-selected.png"
+            "text": "BA Map",
+            "iconPath": "/images/tabBar/map.png",
+            "selectedIconPath": "/images/tabBar/map-selected.png"
         }, {
             "pagePath": "pages/logs/logs",
             "text": "关于",

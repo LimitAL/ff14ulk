@@ -9,7 +9,7 @@
   <view class="body">
     <!-- 左侧列表 -->
     <scroll-view class="menu" scroll-into-view="{{viewid}}" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-with-animation="false" enable-back-to-top="false">
-      <view id="{{item.name_en}}" class="{{index == current?'selected':''}}" wx:for="{{skills}}" catchtap="onTapMenu" data-index="{{index}}" wx:key="{{item.id}}">
+      <view id="{{item.name_en}}" class="{{index == current?'selected':''}} {{item.like?'menu-like':''}}" wx:for="{{skills}}" catchtap="onTapMenu" data-index="{{index}}" wx:key="{{item.id}}">
         <view class="item">{{item.name}}</view>
       </view>
     </scroll-view>
@@ -17,32 +17,39 @@
     <view class="content">
       <view class="content-item">
         <view class="skill-name">{{content.name}}</view>
+        <text class="skill-no">{{content.id}}</text>
         <view class="setLike {{like?'liked':''}}" catchtap="onTapLike">{{like?'已':''}}设为常用</view>
       </view>
-      <view class="content-item">
-        <text class="content-item-title">合成方式</text>
-        <view class="content-item-body">
-          <view class="func-item" wx:for="{{content.from}}" wx:key="{{index}}">
-            <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
-            <view class="func-item-child" wx:for="{{item}}" wx:key="{{item.fid}}" wx:for-item="citem" catchtap="onTapSkill" data-id="{{citem.obj.id}}">
-              {{citem.obj.name}}*{{citem.num}}
+      <scroll-view class="scroll" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-with-animation="false" enable-back-to-top="false">
+        <view class="content-item">
+          <text class="content-item-title">合成方式</text>
+          <view class="content-item-body">
+            <view class="func-item" wx:for="{{content.from}}" wx:key="{{index}}">
+              <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
+              <view class="func-item-child" wx:for="{{item}}" wx:key="{{item.fid}}" wx:for-item="citem" catchtap="onTapSkill" data-id="{{citem.obj.id}}">
+                {{citem.obj.name}}*{{citem.num}}
+              </view>
+            </view>
+            <view class="tips">
+              <text>点击素材技能名查看来源</text>
+              <text>长按来源弹窗查看文理碎晶出处</text>
             </view>
           </view>
         </view>
-      </view>
-      <view class="content-item">
-        <text class="content-item-title">适用职业</text>
-        <view class="content-item-body jobIcon-container">
-          <view wx:for="{{content.access}}" wx:key="{{index}}">
-            <image class="jobIcon" src="/images/jobType/30px-{{item}}.png" mode="widthFix" lazy-load="false">
-            </image>
+        <view class="content-item">
+          <text class="content-item-title">适用职业</text>
+          <view class="content-item-body jobIcon-container">
+            <view wx:for="{{content.access}}" wx:key="{{index}}">
+              <image class="jobIcon" src="/images/jobType/30px-{{item}}.png" mode="widthFix" lazy-load="false">
+              </image>
+            </view>
           </view>
         </view>
-      </view>
+      </scroll-view>
     </view>
   </view>
 </view>
-<view wx:if="{{searchSource.isShow}}" style="left: {{searchSource.left}}px;top:{{searchSource.top}}px" class="skill-source-tootip">
+<view wx:if="{{searchSource.isShow}}" style="left: {{searchSource.left}}px;top:{{searchSource.top}}px" class="skill-source-tootip" catchlongpress="onLongTapModal">
   <view>{{searchSource.name}}</view>
   来自于：{{searchSource.data.name}}
 </view>

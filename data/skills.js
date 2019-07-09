@@ -50,6 +50,8 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 4, num: 1 }],
+        [{ fid: 3, num: 1 }, { fid: 12, num: 1 }],
+        [{ fid: 3, num: 1 }, { fid: 34, num: 1 }],
         [{ fid: 3, num: 1 }, { fid: 38, num: 2 }],
         [{ fid: 34, num: 3 }]
     ],
@@ -64,6 +66,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 5, num: 1 }],
+        [{ fid: 1, num: 1 }, { fid: 37, num: 1 }],
         [{ fid: 1, num: 1 }, { fid: 32, num: 2 }],
         [{ fid: 33, num: 3 }],
     ],
@@ -78,6 +81,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 6, num: 1 }],
+        [{ fid: 2, num: 1 }, { fid: 23, num: 1 }],
         [{ fid: 2, num: 3 }],
     ],
     isDirect: true,
@@ -90,7 +94,7 @@ const skills = [{
     name_en: 'chdjy',
     icon: '',
     from: [
-        [{ fid: 24, num: 3 }]
+        [{ fid: 24, num: 2 }]
     ],
     isDirect: false,
     access: ['T'],
@@ -102,6 +106,8 @@ const skills = [{
     name_en: 'sqsdjy',
     icon: '',
     from: [
+        [{ fid: 6, num: 1 }, { fid: 33, num: 1 }],
+        [{ fid: 6, num: 1 }, { fid: 34, num: 1 }],
         [{ fid: 3, num: 1 }, { fid: 32, num: 1 }, { fid: 34, num: 1 }]
     ],
     isDirect: false,
@@ -114,6 +120,7 @@ const skills = [{
     name_en: 'kzsdjy',
     icon: '',
     from: [
+        [{ fid: 6, num: 1 }, { fid: 4, num: 1 }],
         [{ fid: 2, num: 1 }, { fid: 6, num: 1 }, { fid: 38, num: 1 }]
     ],
     isDirect: false,
@@ -128,6 +135,7 @@ const skills = [{
     from: [
         [{ fid: 10, num: 1 }],
         [{ fid: 24, num: 3 }],
+        [{ fid: 19, num: 3 }],
         [{ fid: 24, num: 1 }, { fid: 19, num: 1 }]
     ],
     isDirect: true,
@@ -141,6 +149,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 11, num: 1 }],
+        [{ fid: 2, num: 1 }, { fid: 4, num: 1 }],
         [{ fid: 1, num: 1 }, { fid: 2, num: 1 }, { fid: 3, num: 1 }]
     ],
     isDirect: true,
@@ -179,6 +188,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 22, num: 3 }],
+        [{ fid: 39, num: 1 }, { fid: 22, num: 1 }],
         [{ fid: 1, num: 1 }, { fid: 39, num: 1 }, { fid: 16, num: 1 }],
         [{ fid: 39, num: 1 }, { fid: 27, num: 2 }]
     ],
@@ -217,7 +227,9 @@ const skills = [{
     name_en: 'wlqmb',
     icon: '',
     from: [
-        [{ fid: 16, num: 3 }]
+        [{ fid: 16, num: 3 }],
+        [{ fid: 16, num: 2 }, { fid: 1, num: 1 }],
+        [{ fid: 16, num: 1 }, { fid: 20, num: 1 }]
     ],
     isDirect: false,
     access: ['D', 'T', 'H'],
@@ -243,8 +255,8 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 19, num: 1 }],
-        [{ fid: 23, num: 2 }],
-        [{ fid: 23, num: 1 }, { fid: 26, num: 2 }]
+        [{ fid: 23, num: 2 }] //,
+        // [{ fid: 23, num: 1 }, { fid: 26, num: 2 }]
     ],
     isDirect: true,
     access: ['D', 'T', 'H'],
@@ -257,6 +269,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 20, num: 1 }],
+        [{ fid: 27, num: 1 }, { fid: 5, num: 1 }],
         [{ fid: 1, num: 1 }, { fid: 16, num: 1 }, { fid: 27, num: 1 }]
     ],
     isDirect: true,
@@ -270,7 +283,8 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 20, num: 3 }],
-        [{ fid: 28, num: 2 }]
+        [{ fid: 28, num: 2 }],
+        [{ fid: 4, num: 1 }, { fid: 20, num: 1 }],
     ],
     isDirect: false,
     access: ['D', 'T'],
@@ -284,7 +298,8 @@ const skills = [{
     from: [
         [{ fid: 22, num: 1 }],
         [{ fid: 37, num: 3 }],
-        [{ fid: 27, num: 3 }]
+        [{ fid: 27, num: 3 }],
+        [{ fid: 37, num: 1 }, { fid: 5, num: 1 }]
     ],
     isDirect: true,
     access: ['D', 'H'],
@@ -308,7 +323,8 @@ const skills = [{
     name_en: 'wlqx',
     icon: '',
     from: [
-        [{ fid: 24, num: 1 }]
+        [{ fid: 24, num: 1 }],
+        [{ fid: 5, num: 1 }, { fid: 13, num: 1 }]
     ],
     isDirect: true,
     access: ['D', 'T', 'H'],
@@ -320,6 +336,7 @@ const skills = [{
     name_en: 'wlytb',
     icon: '',
     from: [
+        [{ fid: 26, num: 1 }, { fid: 24, num: 1 }],
         [{ fid: 2, num: 1 }, { fid: 23, num: 1 }, { fid: 26, num: 1 }]
     ],
     isDirect: false,
@@ -357,6 +374,7 @@ const skills = [{
     icon: '',
     from: [
         [{ fid: 28, num: 1 }],
+        [{ fid: 32, num: 1 }, { fid: 6, num: 1 }],
         [{ fid: 2, num: 2 }, { fid: 32, num: 1 }]
     ],
     isDirect: true,
@@ -369,6 +387,8 @@ const skills = [{
     name_en: 'wlcn',
     icon: '',
     from: [
+        [{ fid: 28, num: 1 }, { fid: 13, num: 1 }],
+        [{ fid: 11, num: 1 }, { fid: 20, num: 1 }],
         [{ fid: 1, num: 1 }, { fid: 2, num: 1 }, { fid: 32, num: 1 }]
     ],
     isDirect: false,
@@ -381,6 +401,7 @@ const skills = [{
     name_en: 'wlfg',
     icon: '',
     from: [
+        [{ fid: 6, num: 1 }, { fid: 19, num: 1 }],
         [{ fid: 2, num: 1 }, { fid: 38, num: 1 }, { fid: 19, num: 1 }]
     ],
     isDirect: false,
@@ -448,7 +469,9 @@ const skills = [{
     name_en: 'wlyl',
     icon: '',
     from: [
-        [{ fid: 33, num: 2 }]
+        [{ fid: 33, num: 2 }],
+        [{ fid: 28, num: 1 }, { fid: 5, num: 1 }],
+        [{ fid: 32, num: 2 }, { fid: 5, num: 1 }]
     ],
     isDirect: false,
     access: ['D', 'T'],
@@ -460,7 +483,9 @@ const skills = [{
     name_en: 'wlzs',
     icon: '',
     from: [
-        [{ fid: 23, num: 1 }, { fid: 2, num: 2 }]
+        [{ fid: 27, num: 1 }, { fid: 33, num: 1 }],
+        [{ fid: 32, num: 2 }, { fid: 23, num: 1 }],
+        [{ fid: 23, num: 1 }, { fid: 33, num: 1 }]
     ],
     isDirect: false,
     access: ['D', 'T'],
@@ -656,7 +681,8 @@ const skills = [{
     name_en: 'xzdjy',
     icon: '',
     from: [
-        [{ fid: 1, num: 1 }, { fid: 5, num: 1 }, { fid: 48, num: 1 }]
+        [{ fid: 1, num: 1 }, { fid: 5, num: 1 }, { fid: 48, num: 1 }],
+        [{ fid: 4, num: 1 }, { fid: 34, num: 1 }, { fid: 48, num: 1 }]
     ],
     isDirect: false,
     access: ['MD'],

@@ -8,7 +8,7 @@
 
 .search {
   margin: 10rpx 5rpx;
-  padding: 5rpx;
+  padding: 15rpx;
   border: 2rpx solid #dfdfdf;
   border-radius: 14rpx;
 }
@@ -17,11 +17,22 @@
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 }
 
 .menu {
   width: 250rpx;
-  font-size: 24rpx;
+  font-size: 26rpx;
+}
+
+.scroll {
+  height: 95%;
+  padding-bottom: 200rpx;
+}
+
+.menu-like {
+  outline: 1rpx solid #f90;
+  color: #f90;
 }
 
 .content {
@@ -48,6 +59,13 @@
   width: 100%;
 }
 
+.skill-no {
+  margin-left: 20rpx;
+  font-weight: 600;
+  font-family: '微软雅黑';
+  color: #999;
+}
+
 .skill-name,
 .setLike {
   padding: 10rpx 20rpx;
@@ -56,6 +74,7 @@
 
 .skill-name {
   display: inline-block;
+  margin-left: 20rpx;
   border: 2rpx solid #009688;
   color: #009688;
 }
@@ -67,8 +86,9 @@
 }
 
 .liked {
-  background-color: #dfdfdf;
-  color: #999;
+  background-color: #f7f7f7;
+  border-color: #dcdee2;
+  color: #c5c8ce;
 }
 
 .content-item-title::before {
@@ -96,6 +116,16 @@
 .func-item-child {
   position: relative;
   margin: 10rpx 0 0 40rpx;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+  border: 1rpx dashed #f90;
+  border-radius: 14rpx;
+  font-size: 25rpx;
+  color: #999;
 }
 
 .skill-source-tootip {

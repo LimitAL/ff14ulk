@@ -9,4 +9,8 @@
     <view>职业图标来自于</view>
     <view>“最终幻想XIV中文维基 - 灰机wiki”</view>
   </view>
+  <view class="item">
+    <view>Bug反馈可点击右上角“···”，选择“关于FF14 优雷卡工具”</view>
+    <view>点击“反馈与投诉”进行填写提交</view>
+  </view>
 </view>

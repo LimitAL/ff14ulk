@@ -1,5 +1,5 @@
 function funcToCN(index) {
-    var arr = ['一', '二', '三', '四'];
+    var arr = ['一', '二', '三', '四', '五'];
     return arr[index];
 }
 
