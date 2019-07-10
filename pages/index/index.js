@@ -125,6 +125,9 @@ Page({
                 keyword: key
             });
         } else {
+            this.setData({
+                keyword: key
+            });
             this.init();
         }
 
@@ -133,6 +136,13 @@ Page({
             this.processContent(0);
         }
         this.likeStatusOnload(this.data.content.id);
+    },
+    // 清空搜索框
+    onTapClearKeyword() {
+        console.log("clear");
+        this.onInputSearch({
+            detail: { value: "" }
+        });
     },
     // 查询技能来源
     onTapSkill(e) {

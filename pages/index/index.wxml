@@ -2,8 +2,9 @@
 <wxs src="../../utils/utils.wxs" module="tools" />
 <view class="container" bindtap="onClickGlobal">
   <!-- 搜索框 -->
-  <view>
-    <input class="search" type="text" confirm-type="search" placeholder="搜索,可输入技能名或首字母,如：xs" bindinput="onInputSearch" />
+  <view class="search-container">
+    <input value="{{keyword}}" class="search" type="text" confirm-type="search" placeholder="搜索,可输入技能名或首字母,如：xs" bindinput="onInputSearch" />
+    <icon wx:if="{{keyword}}" class="search-clear-btn" type="clear" size="60rpx" catchtap="onTapClearKeyword" />
   </view>
   <!-- 主体内容 -->
   <view class="body">
@@ -16,6 +17,7 @@
     <!-- 右侧详情 -->
     <view class="content">
       <view class="content-item">
+        <image wx:if="{{content.id}}" class="skill-icon" src="/images/skills/{{content.id}}.png" mode="widthFix"></image>
         <view class="skill-name">{{content.name}}</view>
         <text class="skill-no">{{content.id}}</text>
         <view class="setLike {{like?'liked':''}}" catchtap="onTapLike">{{like?'已':''}}设为常用</view>

@@ -6,11 +6,22 @@
   height: 100%;
 }
 
-.search {
+.search-container {
+  position: relative;
   margin: 10rpx 5rpx;
-  padding: 15rpx;
+  padding: 15rpx 30rpx;
   border: 2rpx solid #dfdfdf;
-  border-radius: 14rpx;
+  border-radius: 200rpx;
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.search {
+  width: 80%;
 }
 
 .body {
@@ -47,6 +58,7 @@
 }
 
 .content-item {
+  position: relative;
   width: 100%;
   margin-bottom: 40rpx;
 }
@@ -57,6 +69,12 @@
   font-size: 38rpx;
   font-weight: 300;
   width: 100%;
+}
+
+.skill-icon {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
 }
 
 .skill-no {
@@ -74,7 +92,7 @@
 
 .skill-name {
   display: inline-block;
-  margin-left: 20rpx;
+  margin-left: 80rpx;
   border: 2rpx solid #009688;
   color: #009688;
 }
