@@ -126,7 +126,7 @@ Page({
             });
         } else {
             this.setData({
-                keyword: key
+                keyword: ""
             });
             this.init();
         }
@@ -134,15 +134,18 @@ Page({
 
         if (result.length > 0) {
             this.processContent(0);
+        } else {
+            this.likeStatusOnload(this.data.content.id);
         }
-        this.likeStatusOnload(this.data.content.id);
     },
     // 清空搜索框
     onTapClearKeyword() {
-        console.log("clear");
-        this.onInputSearch({
-            detail: { value: "" }
-        });
+        // 延迟触发，不这样在真机上会闪烁一下无法清除，必须点击第二次
+        setTimeout(function() {
+            this.onInputSearch({
+                detail: { value: "" }
+            });
+        }.bind(this), 100);
     },
     // 查询技能来源
     onTapSkill(e) {

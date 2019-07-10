@@ -16,8 +16,9 @@
 
 .search-clear-btn {
   position: absolute;
+  top: 0;
   right: 10rpx;
-  top: 10rpx;
+  margin-top: 6rpx;
 }
 
 .search {
