@@ -1,0 +1,35 @@
+<!--pages/fuseDetail/fuseDetail.wxml-->
+<wxs src="../../utils/utils.wxs" module="tools" />
+<view class="btn {{astralIndex==-1||ombralIndex==-1?'disabled':''}}" catchtap="onTapSave">保存设置</view>
+<view class="container" bindtap="onTapGlobal">
+  <view class="astral-container fuse-box">
+    <view class="title">星极融合器</view>
+    <view class="skill">
+      <skillAutoCompleteComponent bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="astral"></skillAutoCompleteComponent>
+    </view>
+    <view class="select-area">
+      <text class="tips" style="opacity: {{astralIndex == -1 && astral.from.length>0 ?1:0}}">点击下方区域选择一个你希望使用的配方</text>
+      <view class="select-item {{astralIndex === index?'selected':''}}" wx:for="{{astral.from}}" wx:key="{{index}}" catchtap="onTapFrom" data-type="astral" data-index="{{index}}">
+        <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
+        <view class="select-item-option" wx:for="{{item}}" wx:for-item="citem" wx:key="{{citem.fid}}">{{citem.obj.name}} * {{citem.num}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="ombral-container fuse-box">
+    <view class="title">灵极融合器</view>
+    <view class="skill">
+      <skillAutoCompleteComponent bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="ombral"></skillAutoCompleteComponent>
+    </view>
+    <view class="select-area">
+      <text class="tips" style="opacity: {{ombralIndex == -1 && ombral.from.length>0 ?1:0}}">请在以下合成方式中选择一项希望使用的合成方式</text>
+      <view class="select-item {{ombralIndex === index?'selected':''}}" wx:for="{{ombral.from}}" wx:key="{{index}}" catchtap="onTapFrom" data-type="ombral" data-index="{{index}}">
+        <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
+        <view class="select-item-option" wx:for="{{item}}" wx:for-item="citem" wx:key="{{citem.fid}}">{{citem.obj.name}} * {{citem.num}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view>左右两侧的融合器分别可以选定一个技能，你可以如同“文理技能”页的搜索那样搜索到你需要的技能，随后点击下拉框内的指定技能拉取它的配方。</view>
+  <view>在保存之前，请确认两个技能都已经选定了你所需要的配方，即使它只有一个配方。</view>
+</view>

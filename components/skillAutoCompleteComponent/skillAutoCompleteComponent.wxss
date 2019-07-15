@@ -1,0 +1,51 @@
+/* components/skillAutoCompleteComponent/skillAutoCompleteComponent.wxss */
+
+.tip {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.input {
+  margin-top: 10rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 14rpx;
+  padding: 5rpx 10rpx;
+}
+
+.list {
+  position: absolute;
+  left: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+  border: 2rpx solid #ccc;
+  border-radius: 14rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 5rpx 10rpx;
+  height: 80rpx;
+}
+
+.no {
+  width: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.icon {
+  height: inherit;
+}
+
+.icon-image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.name {
+  margin-left: 20rpx;
+  line-height: 80rpx;
+}

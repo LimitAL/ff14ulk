@@ -1,0 +1,49 @@
+<!--pages/fuse/fuse.wxml-->
+<view class="container" bindtap="onTapGlobal">
+  <view class="item column" wx:for="{{fuseList}}" wx:key="{{index}}">
+    <view class="header row">
+      <view class="btn-area">
+        <view class="modal" wx:if="{{item.modal}}">
+          <view class="modal-item">编辑</view>
+          <view class="modal-item" catchtap="move" data-arrow="up" data-index="{{index}}">向上移动</view>
+          <view class="modal-item" catchtap="move" data-arrow="down" data-index="{{index}}">向下移动</view>
+          <view class="modal-item" catchtap="delete" data-index="{{index}}">删除</view>
+        </view>
+        <image class="area-img" src="/images/icon/Dot.png" catchtap="onTapBtn" data-index="{{index}}"></image>
+      </view>
+    </view>
+    <view class="body row">
+      <view class="box column">
+        <view class="options-header column">
+          <view class="skill-icon">
+            <image class="area-img" src="/images/skills/{{item.astral.skill.id}}.png"></image>
+          </view>
+          <text class="skill-name">{{item.astral.skill.name}}</text>
+        </view>
+        <view class="options-body">
+          <view class="scheme-item" wx:for="{{item.astral.skill.from[item.astral.scheme]}}" wx:key="{{index}}">
+            {{item.obj.name}} * {{item.num}}
+          </view>
+        </view>
+      </view>
+      <view class="box column">
+        <view class="options-header column">
+          <view class="skill-icon">
+            <image class="area-img" src="/images/skills/{{item.ombral.skill.id}}.png"></image>
+          </view>
+          <text class="skill-name">{{item.ombral.skill.name}}</text>
+        </view>
+        <view class="options-body">
+          <view class="scheme-item" wx:for="{{item.ombral.skill.from[item.ombral.scheme]}}" wx:key="{{index}}">
+            {{item.obj.name}} * {{item.num}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="create-btn" catchtap="onTapCreateFuse">新建融合组合</view>
+  <view class="footer" wx:if="{{fuseList.length === 0}}">
+    <view>在这里，你可以自由设定常用的技能组合与配方。它将保存在你的本地，下次使用时可以很方便而直观的看到多种搭配所需技能素材。</view>
+    <view>点击上方按钮尝试添加第一个融合技能组合。</view>
+  </view>
+</view>

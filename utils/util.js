@@ -14,6 +14,32 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const processFromData = (data, skills) => {
+  let result = new Object();
+  for (let i in data) {
+    if (i !== "from") {
+      result[i] = data[i];
+    }
+  }
+  result.from = new Array();
+  let arr = new Array();
+  data.from.forEach(element => {
+    arr = new Array();
+    element.forEach(item => {
+      arr.push({
+        num: item.num,
+        fid: item.fid,
+        obj: skills.find(e => {
+          return e.id == item.fid
+        })
+      });
+    });
+    result.from.push(arr);
+  });
+  return result;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  processFromData
 }

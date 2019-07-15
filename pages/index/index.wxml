@@ -29,7 +29,7 @@
             <view class="func-item" wx:for="{{content.from}}" wx:key="{{index}}">
               <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
               <view class="func-item-child" wx:for="{{item}}" wx:key="{{item.fid}}" wx:for-item="citem" catchtap="onTapSkill" data-id="{{citem.obj.id}}">
-                {{citem.obj.name}}*{{citem.num}}
+                {{citem.obj.name}} * {{citem.num}}
               </view>
             </view>
             <view class="tips">

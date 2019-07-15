@@ -3,6 +3,7 @@
 page {
   height: 100%;
   font-size: 32rpx;
+  color: #333;
 }
 
 .ui-tag {
@@ -17,4 +18,22 @@ page {
 
 .ui-tag-success {
   background-color: #19be6b;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  text-indent: 2em;
+  color: #999;
 }

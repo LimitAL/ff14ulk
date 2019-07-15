@@ -1,0 +1,117 @@
+/* pages/fuse/fuse.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 20rpx;
+  font-size: 32rpx;
+  height: 100%;
+  background-color: #dfdfdf;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 20rpx;
+  /* border: 2rpx solid #ccc; */
+  border-radius: 14rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  box-shadow: 10rpx 10rpx 10rpx #999;
+}
+
+.btn-area {
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.modal {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 14rpx;
+  padding: 10rpx;
+  width: 150rpx;
+  background-color: #fff;
+  box-shadow: 4rpx 4rpx 4rpx #ccc;
+  animation: show .2s linear;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-10rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rpx);
+  }
+}
+
+.modal-item {
+  padding: 4rpx 0;
+  text-align: center;
+}
+
+.modal-item:not(:last-child) {
+  border-bottom: 2rpx solid #dfdfdf;
+}
+
+.area-img {
+  width: inherit;
+  height: inherit;
+}
+
+.body {
+  width: 100%;
+}
+
+.box {
+  width: 50%;
+  padding: 20rpx;
+}
+
+.box:first-child {
+  border-right: 2rpx dashed #dfdfdf;
+}
+
+.options-header {
+  justify-content: center;
+  margin-bottom: 10rpx;
+  border-bottom: 2rpx dashed #ccc;
+  padding-bottom: 10rpx;
+}
+
+.skill-name {
+  text-align: center;
+  color: #2d8cf0;
+  font-weight: 600;
+}
+
+.skill-icon {
+  margin-left: 110rpx;
+  text-align: center;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.options-body {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.scheme-item {
+  margin: 5rpx 0;
+}
+
+.create-btn {
+  border: 2rpx solid #2d8cf0;
+  border-radius: 14rpx;
+  padding: 20rpx;
+  background-color: #2d8cf0;
+  color: #fff;
+  text-align: center;
+}

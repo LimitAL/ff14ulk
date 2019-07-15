@@ -1,33 +1,40 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/baimage/baimage"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
-    },
-    "sitemapLocation": "sitemap.json",
-    "tabBar": {
-        "borderStyle": "white",
-        "list": [{
-            "pagePath": "pages/index/index",
-            "text": "文理技能",
-            "iconPath": "/images/tabBar/skill.png",
-            "selectedIconPath": "/images/tabBar/skill-selected.png"
-        }, {
-            "pagePath": "pages/baimage/baimage",
-            "text": "BA Map",
-            "iconPath": "/images/tabBar/map.png",
-            "selectedIconPath": "/images/tabBar/map-selected.png"
-        }, {
-            "pagePath": "pages/logs/logs",
-            "text": "关于",
-            "iconPath": "/images/tabBar/info.png",
-            "selectedIconPath": "/images/tabBar/info-selected.png"
-        }]
-    }
+  "pages": [
+    "pages/fuse/fuse",
+    "pages/fuseDetail/fuseDetail",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/baimage/baimage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "文理技能",
+      "iconPath": "/images/tabBar/skill.png",
+      "selectedIconPath": "/images/tabBar/skill-selected.png"
+    }, {
+      "pagePath": "pages/fuse/fuse",
+      "text": "融合器",
+      "iconPath": "/images/tabBar/fuse.png",
+      "selectedIconPath": "/images/tabBar/fuse-selected.png"
+    }, {
+      "pagePath": "pages/baimage/baimage",
+      "text": "BA Map",
+      "iconPath": "/images/tabBar/map.png",
+      "selectedIconPath": "/images/tabBar/map-selected.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "关于",
+      "iconPath": "/images/tabBar/info.png",
+      "selectedIconPath": "/images/tabBar/info-selected.png"
+    }]
+  }
 }

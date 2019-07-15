@@ -1,0 +1,59 @@
+/* pages/fuseDetail/fuseDetail.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 20rpx;
+}
+
+.btn {
+  margin: 0 20rpx;
+  border: 2rpx solid #2d8cf0;
+  padding: 20rpx;
+  text-align: center;
+  background-color: #2d8cf0;
+  color: #fff;
+}
+
+.disabled {
+  border: 2rpx solid #ccc;
+  background-color: #ccc;
+  color: #999;
+}
+
+.fuse-box {
+  margin: 20rpx 5rpx;
+  border: 2rpx dashed #000;
+  border-radius: 14rpx;
+  padding: 20rpx;
+  width: 50%;
+}
+
+.title {
+  margin-bottom: 5rpx;
+  border-bottom: 2rpx solid #dfdfdf;
+  padding-bottom: 5rpx;
+  text-align: center;
+}
+
+.tips {
+  font-size: 26rpx;
+  color: #f00;
+}
+
+.select-item {
+  margin: 20rpx 0;
+  border: 2rpx solid #2d8cf0;
+  border-radius: 14rpx;
+  padding: 20rpx;
+}
+
+.selected {
+  background-color: #2d8cf0;
+  color: #fff;
+}
+
+.select-item-option {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}

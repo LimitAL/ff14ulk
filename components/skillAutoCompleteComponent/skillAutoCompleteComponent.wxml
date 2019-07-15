@@ -1,0 +1,16 @@
+<!--components/skillAutoCompleteComponent/skillAutoCompleteComponent.wxml-->
+<view class="container">
+  <view class="tip">输入需要合成的技能名或首字母</view>
+  <input class="input" type="text" bindinput="onInputSearch" value="{{keyword}}" />
+  <cover-view class="list" wx:if="{{modal}}">
+    <!--  wx:if="{{modal}}" -->
+    <cover-view class="item" wx:for="{{list}}" wx:key="item.id" catchtap="onTapSkill" data-index="{{index}}">
+      <cover-view class="no">{{item.id}}</cover-view>
+      <cover-view class="icon">
+        <cover-image class="icon-images" src="/images/skills/{{item.id}}.png" />
+      </cover-view>
+      <cover-view class="name">{{item.name}}</cover-view>
+      <cover-view class="access"></cover-view>
+    </cover-view>
+  </cover-view>
+</view>

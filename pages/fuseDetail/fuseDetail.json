@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设定融合器",
+  "usingComponents": {
+    "skillAutoCompleteComponent": "/components/skillAutoCompleteComponent/skillAutoCompleteComponent"
+  }
+}
