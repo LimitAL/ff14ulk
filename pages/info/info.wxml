@@ -1,0 +1,18 @@
+<!--pages/info/info.wxml-->
+<view class="container column">
+  <view class="header column">
+    <image class="bg-img" src="/images/info/bg-img.jpg"></image>
+    <image class="avator" src="/images/info/avator.png"></image>
+    <text class="welcome">救下的幸福兔在看着你</text>
+  </view>
+  <view class="body column">
+    <view class="item row" wx:for="{{items}}" wx:key="{{index}}" bindtap="onTapItem" data-index="{{index}}">
+      <image class="item-icon" src="/images/info/{{item.icon}}.png"></image>
+      <text class="item-text">{{item.text}}</text>
+      <view class="right">
+        <text class="right-text"></text>
+        <image class="right-img" src="/images/info/more.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
