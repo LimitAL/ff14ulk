@@ -39,17 +39,9 @@ const processFromData = (data, skills) => {
   return result;
 }
 
-function getLocalTime(nS) {
-  //将时间戳（十三位时间戳，也就是带毫秒的时间戳）转换成时间格式
-  // d.cTime = 1539083829787
-  let date = new Date(nS);
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
-  month = month < 10 ? "0" + month : month;
-  day = day < 10 ? "0" + day : day;
-  date = year + '-' + month + '-' + day;
-  return date;
+function getLocalTime(date) {
+  let nS = Number(date);
+  return new Date(parseInt(nS)).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
 }
 
 module.exports = {

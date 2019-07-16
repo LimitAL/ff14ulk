@@ -1,2 +1,24 @@
 <!--pages/weather/weather.wxml-->
-<text>pages/weather/weather.wxml</text>
+<wxs src="../../utils/utils.wxs" module="tools" />
+<view class="container row">
+  <view class="left column">
+    <view class="area-item {{index === current?'selected':''}}" wx:for="{{areas}}" wx:key="{{index}}" data-index="{{index}}" catchtap="onTapArea">{{item.name_sm}}</view>
+  </view>
+  <view class="right column">
+    <view class="now-time row">
+      <view class="et-time">ET {{time.now}}</view>
+      <view class="area-name">{{areas[current].name}}</view>
+    </view>
+    <scroll-view class="scroll column" scroll-y>
+      <view class="item row" wx:for="{{weathers}}" wx:key="{{key}}">
+        <image class="weather-icon" src="/images/weather/{{tools.weatherCNtoStr(item.str)}}.png"></image>
+        <view class="weather-name">{{item.str}}</view>
+        <view class="item-time column">
+          <view class="weather-et">{{item.date}}</view>
+          <view class="weather-earch">ET {{item.eurekaTime}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

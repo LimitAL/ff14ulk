@@ -1,3 +1,10 @@
 .item {
   padding: 40rpx 20rpx;
+  text-indent: 2em;
+}
+
+.title {
+  font-size: 38rpx;
+  font-weight: 600;
+  text-indent: 0;
 }

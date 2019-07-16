@@ -1,1 +1,59 @@
 /* pages/weather/weather.wxss */
+
+.container {
+  min-height: 100%;
+}
+
+.left {
+  width: 150rpx;
+  border-right: 2rpx solid #dfdfdf;
+}
+
+.area-item {
+  border-bottom: 2rpx solid #dfdfdf;
+  padding: 30rpx 20rpx;
+}
+
+.selected {
+  background-color: #19be6b;
+  color: #fff;
+}
+
+.right {
+  position: relative;
+  width: 100%;
+}
+
+.now-time {
+  padding: 0 20rpx;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 10rpx 10rpx 10rpx #dfdfdf;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.item {
+  margin: 10rpx 20rpx;
+  border: 2rpx solid #ccc;
+  padding: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-shadow: 10rpx 10rpx 10rpx #ccc;
+  justify-content: space-between;
+}
+
+.weather-icon {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.weather-name {
+  margin-left: 20rpx;
+}
+
+.item-time {
+  line-height: 40rpx;
+}

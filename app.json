@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/fuse/fuse",
+    "pages/logs/logs",
     "pages/weather/weather",
+    "pages/fuse/fuse",
     "pages/info/info",
     "pages/fuseDetail/fuseDetail",
-    "pages/logs/logs",
     "pages/baimage/baimage"
   ],
   "window": {

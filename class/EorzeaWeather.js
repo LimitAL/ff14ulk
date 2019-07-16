@@ -1,3 +1,5 @@
+const EorzeaClock = require('./EorzeaClock.js');
+const EorzeaAreaWeather = require('../data/eorzeaAreaWeather.js');
 module.exports = class EorzeaWeather {
   constructor() {}
   calcBaseDate(time) {

@@ -1,16 +1,34 @@
 <!--logs.wxml-->
 <view>
   <view class="item">
+    <view class="title">文理技能</view>
     <view>文理技能数据来自于NGA最终幻想14分区@缤纷苺圣代 发布的主题帖：</view>
     <view>“4.55版本 优雷卡喷水之地Hydatos篇 攻略”</view>
     <view>“4.55版本 优雷卡涌火之地pyros篇 攻略”</view>
+    <view>此外，同时参考了Eureka Tracker站点内的数据进行内容校准。</view>
   </view>
   <view class="item">
-    <view>职业图标来自于</view>
-    <view>“最终幻想XIV中文维基 - 灰机wiki”</view>
+    <view class="title">图标</view>
+    <view>职业图标来自于“最终幻想XIV中文维基 - 灰机wiki”</view>
+    <view>文理技能图标来自于：</view>
+    <view>Eureka Tracker</view>
+  </view>
+
+  <view class="item">
+    <view class="title">优雷卡天气预报</view>
+    <view>优雷卡天气时钟运行代码来自于：</view>
+    <view>优雷卡天气预报</view>
   </view>
   <view class="item">
-    <view>Bug反馈可点击右上角“···”，选择“关于FF14 优雷卡工具”</view>
-    <view>点击“反馈与投诉”进行填写提交</view>
+    <view class="title">建议与反馈</view>
+    <view>Bug反馈可点击右上角“···”，选择“关于FF14 优雷卡工具”-</view>
+    <view>点击“反馈与投诉”进行填写提交。</view>
+  </view>
+  <view class="item">
+    <view class="title">涉及链接</view>
+    <view>Eureka Tracker</view>
+    <view>https://ffxiv-eureka.com/logograms</view>
+    <view>优雷卡天气预报</view>
+    <view>https://eureka.ffxivsc.cn/weather.htm</view>
   </view>
 </view>

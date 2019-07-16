@@ -1,8 +1,26 @@
 function funcToCN(index) {
-    var arr = ['一', '二', '三', '四', '五'];
-    return arr[index];
+  var arr = ['一', '二', '三', '四', '五'];
+  return arr[index];
+}
+
+function weatherCNtoStr(cn) {
+  var obj = {
+    '晴朗': 'skies',
+    '暴雨': 'showers',
+    '小雪': 'snow',
+    '强风': 'Gales',
+    '薄雾': 'Fog',
+    '热浪': 'blistering',
+    '暴雷': 'Thunder',
+    '暴雪': 'blizzardy',
+    '灵风': 'UmbralWind',
+    '妖雾': 'Gloom',
+    '雷雨': 'Thunderstorms'
+  }
+  return obj[cn] || '';
 }
 
 module.exports = {
-    funcToCN: funcToCN
+  funcToCN: funcToCN,
+  weatherCNtoStr: weatherCNtoStr
 }

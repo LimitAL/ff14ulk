@@ -6,7 +6,7 @@ Page({
    */
   data: {
     items: [
-      // { text: '优雷卡天气预报', icon: 'info', src: '/pages/logs/logs' },
+      { text: '优雷卡天气预报', icon: 'weather', src: '/pages/weather/weather' },
       { text: '关于', icon: 'info', src: '/pages/logs/logs' }
     ]
   },
