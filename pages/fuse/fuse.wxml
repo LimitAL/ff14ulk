@@ -9,7 +9,7 @@
           <view class="modal-item" catchtap="move" data-arrow="down" data-index="{{index}}">向下移动</view>
           <view class="modal-item" catchtap="delete" data-index="{{index}}">删除</view>
         </view>
-        <image class="area-img" src="/images/icon/Dot.png" catchtap="onTapBtn" data-index="{{index}}"></image>
+        <image class="area-img" src="/images/icon/dots.png" catchtap="onTapBtn" data-index="{{index}}"></image>
       </view>
     </view>
     <view class="body row">

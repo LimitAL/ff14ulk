@@ -111,6 +111,7 @@ Page({
 
   // 移除元素
   delete(e) {
+    console.log('del', e);
     let currentIndex = e.currentTarget.dataset.index;
     let _self = this;
     wx.showModal({

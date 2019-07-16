@@ -5,7 +5,7 @@
   flex-direction: column;
   padding: 10rpx 20rpx;
   font-size: 32rpx;
-  height: 100%;
+  min-height: 100%;
   background-color: #dfdfdf;
 }
 
@@ -61,8 +61,9 @@
 }
 
 .area-img {
-  width: inherit;
-  height: inherit;
+  margin-top: 20rpx;
+  width: 80%;
+  height: 80%;
 }
 
 .body {
