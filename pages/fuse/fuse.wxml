@@ -1,6 +1,6 @@
 <!--pages/fuse/fuse.wxml-->
 <view class="container" bindtap="onTapGlobal">
-  <view class="item column" wx:for="{{fuseList}}" wx:key="{{index}}">
+  <view class="item column" wx:for="{{fuseList}}" wx:key="{{index}}" catchlongpress="delete" data-index="{{index}}">
     <view class="header row">
       <view class="btn-area">
         <view class="modal" wx:if="{{item.modal}}">

@@ -111,12 +111,16 @@ Page({
 
   // 移除元素
   delete(e) {
-    console.log('del', e);
     let currentIndex = e.currentTarget.dataset.index;
     let _self = this;
+    // wx.showToast({
+    //   title: '如果你看到这条消息，说明微信当前的Modal功能存在异常，删除操作暂时无法进行。',
+    //   icon: 'none',
+    //   duration: 3000
+    // });
     wx.showModal({
       title: '删除融合组合',
-      content: `将要删除技能组合 ${this.data.fuseList[currentIndex].astral.skill.name}+${this.data.fuseList[currentIndex].ombral.skill.name}`,
+      content: '将要删除技能组合\r\n' + this.data.fuseList[currentIndex].astral.skill.name + '+' + this.data.fuseList[currentIndex].ombral.skill.name,
       success: function(e) {
         if (e.confirm) {
           let storage = wx.getStorageSync('fuse') || [];
@@ -125,7 +129,7 @@ Page({
           _self.loadFuseData();
         }
       }
-    })
+    });
   },
 
   /**

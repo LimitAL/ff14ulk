@@ -54,6 +54,7 @@
 .item {
   position: relative;
   margin-top: 10rpx;
+  padding: 10rpx;
   height: 70rpx;
   line-height: 70rpx;
   background-color: #fff;
@@ -69,6 +70,6 @@
 
 .right {
   position: absolute;
-  top: 10rpx;
+  top: 20rpx;
   right: 0;
 }
