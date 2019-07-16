@@ -1,5 +1,10 @@
 /* components/skillAutoCompleteComponent/skillAutoCompleteComponent.wxss */
 
+image {
+  width: inherit;
+  height: inherit;
+}
+
 .tip {
   font-size: 20rpx;
   color: #666;
@@ -21,13 +26,25 @@
   border-radius: 14rpx;
   margin-top: 10rpx;
   background-color: #fff;
+  box-shadow: 10rpx 10rpx 10rpx #ccc, -10rpx 10rpx 10rpx #ccc, 10rpx -10rpx 10rpx #ccc, -10rpx -10rpx 10rpx #ccc;
+}
+
+.no-data {
+  color: #999;
+  text-align: center;
+  line-height: 80rpx;
 }
 
 .item {
+  position: relative;
   display: flex;
   flex-direction: row;
   padding: 5rpx 10rpx;
   height: 80rpx;
+}
+
+.item:not(:last-child) {
+  border-bottom: 2rpx solid #dfdfdf;
 }
 
 .no {
@@ -37,15 +54,35 @@
 }
 
 .icon {
-  height: inherit;
-}
-
-.icon-image {
+  margin-top: 8rpx;
   height: 70rpx;
   width: 70rpx;
+}
+
+.icon-images {
+  height: inherit;
+  width: inherit;
 }
 
 .name {
   margin-left: 20rpx;
   line-height: 80rpx;
+}
+
+.access {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.job {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.job>image {
+  width: inherit;
+  height: inherit;
 }

@@ -5,7 +5,7 @@
   <view class="astral-container fuse-box">
     <view class="title">星极融合器</view>
     <view class="skill">
-      <skillAutoCompleteComponent bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="astral"></skillAutoCompleteComponent>
+      <skillAutoCompleteComponent keyword="{{astralKey}}" bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="astral"></skillAutoCompleteComponent>
     </view>
     <view class="select-area">
       <text class="tips" style="opacity: {{astralIndex == -1 && astral.from.length>0 ?1:0}}">点击下方区域选择一个你希望使用的配方</text>
@@ -18,7 +18,7 @@
   <view class="ombral-container fuse-box">
     <view class="title">灵极融合器</view>
     <view class="skill">
-      <skillAutoCompleteComponent bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="ombral"></skillAutoCompleteComponent>
+      <skillAutoCompleteComponent keyword="{{ombralKey}}" bind:onSelectSkill="onSelectSkill" toggle="{{toggle}}" data-type="ombral"></skillAutoCompleteComponent>
     </view>
     <view class="select-area">
       <text class="tips" style="opacity: {{ombralIndex == -1 && ombral.from.length>0 ?1:0}}">请在以下合成方式中选择一项希望使用的合成方式</text>

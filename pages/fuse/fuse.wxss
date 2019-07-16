@@ -108,6 +108,7 @@
 }
 
 .create-btn {
+  margin-top: 20rpx;
   border: 2rpx solid #2d8cf0;
   border-radius: 14rpx;
   padding: 20rpx;

@@ -1,5 +1,6 @@
 // pages/fuseDetail/fuseDetail.js
 const skills = require("../../data/skills.js");
+const utils = require("../../utils/util.js");
 Page({
 
   /**
@@ -7,7 +8,10 @@ Page({
    */
   data: {
     isCreate: false,
+    storageIndex: -1,
     toggle: false,
+    astralKey: '',
+    ombralKey: '',
     astral: {
       from: []
     },
@@ -22,7 +26,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let render = new Object();
+    render.isCreate = options.isCreate === "true" ? true : false;
+    if (!render.isCreate) {
+      this.init(options.index);
+    } else {
+      this.setData(render);
+    }
+  },
 
+  // 数据初始化，编辑模式的时候加载初始数据到页面内
+  init(index) {
+    let fuse = wx.getStorageSync('fuse')[index];
+    let data = new Object();
+    for (let i in fuse) {
+      data[i] = utils.processFromData(skills.skills.find(item => item.id === fuse[i].skill), skills.skills);
+      data[`${i}Index`] = fuse[i].scheme;
+      data[`${i}Key`] = data[i].name;
+    }
+    data.storageIndex = index;
+    this.setData(data);
   },
 
   onTapGlobal(e) {
@@ -33,26 +56,7 @@ Page({
 
   onSelectSkill(e) {
     let result = new Object();
-    for (let i in e.detail) {
-      if (i !== "from") {
-        result[i] = e.detail[i];
-      }
-    }
-    result.from = new Array();
-    let arr = new Array();
-    e.detail.from.forEach(element => {
-      arr = new Array();
-      element.forEach(item => {
-        arr.push({
-          num: item.num,
-          fid: item.fid,
-          obj: skills.skills.find(e => {
-            return e.id == item.fid
-          })
-        });
-      });
-      result.from.push(arr);
-    });
+    result = utils.processFromData(e.detail, skills.skills);
     let type = e.currentTarget.dataset.type;
     let data = new Object();
     data[type] = result;
@@ -108,10 +112,15 @@ Page({
 
   setStorage() {
     let fuse = wx.getStorageSync('fuse') || [];
-    fuse.push({
+    let obj = {
       astral: { skill: this.data.astral.id, scheme: this.data.astralIndex },
       ombral: { skill: this.data.ombral.id, scheme: this.data.ombralIndex }
-    });
+    };
+    if (this.data.isCreate) {
+      fuse.unshift(obj);
+    } else {
+      fuse[this.data.storageIndex] = obj;
+    }
     wx.setStorageSync('fuse', fuse);
     wx.navigateBack({
       delta: 1 // 回退前 delta(默认为1) 页面
@@ -124,7 +133,7 @@ Page({
     let ombral = new Set(this.data.ombral.access);
     let intersect = new Set([...astral].filter(x => ombral.has(x)));;
     // 首先检查交集，存在交集则直接检查通过
-    if (intersect.length > 0) {
+    if (intersect.size > 0) {
       return true;
     } else {
       // 无交集时判断星极与灵极是否存在通用项“D”

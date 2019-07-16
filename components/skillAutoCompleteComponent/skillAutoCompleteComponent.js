@@ -13,6 +13,14 @@ Component({
           modal: false
         });
       }
+    },
+    keyword: {
+      type: String,
+      observer: function(val) {
+        this.setData({
+          keyword: val
+        });
+      }
     }
   },
 

@@ -4,7 +4,7 @@
     <view class="header row">
       <view class="btn-area">
         <view class="modal" wx:if="{{item.modal}}">
-          <view class="modal-item">编辑</view>
+          <view class="modal-item" catchtap="edit" data-index="{{index}}">编辑</view>
           <view class="modal-item" catchtap="move" data-arrow="up" data-index="{{index}}">向上移动</view>
           <view class="modal-item" catchtap="move" data-arrow="down" data-index="{{index}}">向下移动</view>
           <view class="modal-item" catchtap="delete" data-index="{{index}}">删除</view>

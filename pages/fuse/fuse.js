@@ -75,6 +75,7 @@ Page({
     });
   },
 
+  // 全局事件
   onTapGlobal() {
     let data = this.data.fuseList;
     for (let i = 0; i < data.length; i++) {
@@ -82,6 +83,14 @@ Page({
     }
     this.setData({
       fuseList: data
+    });
+  },
+
+  // 编辑
+  edit(e) {
+    let currentIndex = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/fuseDetail/fuseDetail?isCreate=false&index=' + currentIndex
     });
   },
 
