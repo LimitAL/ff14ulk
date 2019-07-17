@@ -6,16 +6,23 @@
   </view>
   <view class="right column">
     <view class="now-time row">
-      <view class="et-time">ET {{time.now}}</view>
+      <view class="et-time">
+        <image class="clock-icon" src="/images/icon/clock.png"></image>
+        <text>ET {{time.now}}</text>
+      </view>
       <view class="area-name">{{areas[current].name}}</view>
     </view>
     <scroll-view class="scroll column" scroll-y>
-      <view class="item row" wx:for="{{weathers}}" wx:key="{{key}}">
+      <view class="tips">
+        <view class="tips-now">当前</view>
+        <view class="tip-near">即将到来</view>
+      </view>
+      <view class="item row {{index===0?'current':''}}" wx:for="{{weathers}}" wx:key="{{key}}">
         <image class="weather-icon" src="/images/weather/{{tools.weatherCNtoStr(item.str)}}.png"></image>
         <view class="weather-name">{{item.str}}</view>
         <view class="item-time column">
-          <view class="weather-et">{{item.date}}</view>
-          <view class="weather-earch">ET {{item.eurekaTime}}</view>
+          <view class="weather-earch">{{item.date}}</view>
+          <view class="weather-et {{tools.timeClass(item.eurekaTime)}}">ET {{item.eurekaTime}}</view>
         </view>
       </view>
     </scroll-view>

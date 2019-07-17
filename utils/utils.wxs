@@ -20,7 +20,17 @@ function weatherCNtoStr(cn) {
   return obj[cn] || '';
 }
 
+function timeClass(str) {
+  var obj = {
+    '00:00': 'night',
+    '08:00': 'mornning',
+    '16:00': 'dusk'
+  }
+  return obj[str] || '';
+}
+
 module.exports = {
   funcToCN: funcToCN,
-  weatherCNtoStr: weatherCNtoStr
+  weatherCNtoStr: weatherCNtoStr,
+  timeClass: timeClass
 }

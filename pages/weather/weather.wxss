@@ -25,24 +25,50 @@
 }
 
 .now-time {
-  padding: 0 20rpx;
+  padding: 10rpx 20rpx;
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 10rpx 10rpx 10rpx #dfdfdf;
 }
 
+.et-time {
+  padding: 10rpx;
+  border-radius: 6rpx;
+  background-color: #1296db;
+  color: #fff;
+}
+
+.clock-icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: bottom;
+}
+
+.area-name {
+  border: 2rpx solid #1296db;
+  border-radius: 6rpx;
+  padding: 10rpx 20rpx;
+  color: #1296db;
+}
+
 .scroll {
   height: 100%;
+  background-color: #dfdfdf;
 }
 
 .item {
   margin: 10rpx 20rpx;
-  border: 2rpx solid #ccc;
+  border-radius: 14rpx;
   padding: 10rpx;
   height: 80rpx;
   line-height: 80rpx;
-  box-shadow: 10rpx 10rpx 10rpx #ccc;
+  box-shadow: 10rpx 10rpx 10rpx #999;
   justify-content: space-between;
+  background-color: #fff;
+}
+
+.current {
+  margin-bottom: 80rpx;
 }
 
 .weather-icon {
@@ -56,4 +82,35 @@
 
 .item-time {
   line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.weather-et {
+  text-align: center;
+  color: #fff;
+}
+
+.mornning {
+  background-color: #008B45;
+}
+
+.night {
+  background-color: #062e88;
+}
+
+.dusk {
+  background-color: #9c2f0d;
+}
+
+.tips {
+  position: relative;
+  margin: 20rpx;
+  font-weight: 600;
+  font-size: 34rpx;
+  color: #666;
+}
+
+.tip-near {
+  position: absolute;
+  bottom: -190rpx;
 }
