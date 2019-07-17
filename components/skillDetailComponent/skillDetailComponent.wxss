@@ -1,0 +1,58 @@
+/* components/skillDetailComponent/skillDetailComponent.wxss */
+
+@import '../../app.wxss';
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 28rpx;
+}
+
+.body {
+  margin: 80rpx;
+  border-radius: 14rpx;
+  background-color: #272627;
+  color: #fff;
+}
+
+.header {
+  padding: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  justify-content: space-between;
+}
+
+.title {
+  justify-content: center;
+}
+
+.icon {
+  display: block;
+  margin: 20rpx auto;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.content {
+  padding: 20rpx;
+  text-indent: 1em;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.access {
+  padding: 20rpx;
+  justify-content: center;
+}
+
+.job-icon {
+  margin: 10rpx 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.job-nin {
+  filter: grayscale(1);
+  opacity: 0.5;
+}

@@ -6,7 +6,7 @@
     <text class="welcome">救下的幸福兔在看着你</text>
   </view>
   <view class="body column">
-    <view class="item row" wx:for="{{items}}" wx:key="{{index}}" bindtap="onTapItem" data-index="{{index}}">
+    <view class="item row {{item.interval?'interval':''}}" wx:for="{{items}}" wx:key="{{index}}" bindtap="onTapItem" data-index="{{index}}">
       <image class="item-icon" src="/images/info/{{item.icon}}.png"></image>
       <text class="item-text">{{item.text}}</text>
       <view class="right">

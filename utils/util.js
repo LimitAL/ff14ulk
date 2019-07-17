@@ -21,6 +21,9 @@ const processFromData = (data, skills) => {
       result[i] = data[i];
     }
   }
+  if (result.description) {
+    result.description = result.description.split("|");
+  }
   result.from = new Array();
   let arr = new Array();
   data.from.forEach(element => {

@@ -1,4 +1,6 @@
 {
-    "navigationBarTitleText": "文理技能合成表",
-    "usingComponents": {}
+  "navigationBarTitleText": "文理技能合成表",
+  "usingComponents": {
+    "skillDetailComponent": "/components/skillDetailComponent/skillDetailComponent"
+  }
 }

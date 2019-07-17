@@ -14,7 +14,7 @@
     </view>
     <view class="body row">
       <view class="box column">
-        <view class="options-header column">
+        <view class="options-header column" catchtap="onTapSkillName" data-id="{{item.astral.skill.id}}">
           <view class="skill-icon">
             <image class="area-img" src="/images/skills/{{item.astral.skill.id}}.png"></image>
           </view>
@@ -27,7 +27,7 @@
         </view>
       </view>
       <view class="box column">
-        <view class="options-header column">
+        <view class="options-header column" catchtap="onTapSkillName" data-id="{{item.ombral.skill.id}}">
           <view class="skill-icon">
             <image class="area-img" src="/images/skills/{{item.ombral.skill.id}}.png"></image>
           </view>
@@ -47,3 +47,4 @@
     <view>点击上方按钮尝试添加第一个融合技能组合。</view>
   </view>
 </view>
+<skillDetailComponent data="{{content}}" show="{{skillDetailShow}}" bind:close="onTapSkillName"></skillDetailComponent>

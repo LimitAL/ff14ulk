@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    fuseList: []
+    fuseList: [],
+    skillDetailShow: false,
+    content: null
   },
 
   /**
@@ -130,6 +132,19 @@ Page({
         }
       }
     });
+  },
+  onTapSkillName(show) {
+    let id, data = new Object();
+    if (typeof show !== "boolean") {
+      id = show.currentTarget.dataset.id;
+      if (id) {
+        data.content = skills.skills.find(item => item.id === id);
+        data.content = utils.processFromData(data.content, skills.skills);
+      }
+      show = !this.data.skillDetailShow;
+    }
+    data.skillDetailShow = show;
+    this.setData(data);
   },
 
   /**

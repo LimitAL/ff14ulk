@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/weather/weather",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/fuse/fuse",
+    "pages/index/index",
     "pages/info/info",
+    "pages/weather/weather",
+    "pages/logs/logs",
     "pages/fuseDetail/fuseDetail",
     "pages/baimage/baimage"
   ],

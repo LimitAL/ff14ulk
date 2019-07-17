@@ -61,6 +61,10 @@
   align-items: center;
 }
 
+.interval {
+  margin-top: 50rpx;
+}
+
 .item-icon,
 .right-img {
   margin: 0 10rpx;

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "融合器",
-  "usingComponents": {}
+  "usingComponents": {
+    "skillDetailComponent": "/components/skillDetailComponent/skillDetailComponent"
+  }
 }

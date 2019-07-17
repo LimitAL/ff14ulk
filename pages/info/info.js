@@ -6,9 +6,9 @@ Page({
    */
   data: {
     items: [
-      { type: 'nav', text: '优雷卡天气预报', icon: 'weather', src: '/pages/weather/weather' },
-      { type: 'btn', text: '清除缓存', icon: 'clear', src: 'clearStorage' },
-      { type: 'nav', text: '关于', icon: 'info', src: '/pages/logs/logs' }
+      { interval: false, type: 'nav', text: '优雷卡天气预报', icon: 'weather', src: '/pages/weather/weather' },
+      { interval: true, type: 'btn', text: '清除缓存', icon: 'clear', src: 'clearStorage' },
+      { interval: false, type: 'nav', text: '关于', icon: 'info', src: '/pages/logs/logs' }
     ]
   },
   onTapItem(e) {

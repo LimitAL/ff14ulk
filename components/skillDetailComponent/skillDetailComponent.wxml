@@ -1,0 +1,25 @@
+<!--components/skillDetailComponent/skillDetailComponent.wxml-->
+<view class="container" wx:if="{{show}}" bindtap="onTapClose">
+  <view class="body column">
+    <view class="header row">
+      <view class="title colmun">
+        <image wx:if="{{data.id}}" class="icon" src="/images/skills/{{data.id}}.png"></image>
+        <text class="name">{{data.name}}</text>
+      </view>
+      <view class="column">
+        <text>使用次数：{{data.number === null?'无限制':data.number}}</text>
+        <text wx:if="{{data.launch}}">发动时间：{{data.launch}}s</text>
+        <text wx:else>发动时间：瞬发</text>
+        <text>复唱时间：{{data.repeat}}s</text>
+        <text>效果时间：{{data.keep === null?'永久':data.keep}}</text>
+      </view>
+    </view>
+    <view class="content column">
+      <text class="description" wx:for="{{data.description}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <view class="access row">
+      <image class="job-icon" wx:for="{{data.access}}" src="/images/jobType/30px-{{item}}.png" wx:key="{{index}}"></image>
+      <image class="job-icon job-nin" wx:if="{{data.id === 24}}" src="/images/jobType/nin.png"></image>
+    </view>
+  </view>
+</view>
