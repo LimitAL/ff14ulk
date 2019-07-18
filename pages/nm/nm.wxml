@@ -20,6 +20,7 @@
         </view>
         <view class="fate-spoils row">
           <image class="fate-spoils-img" wx:for="{{item.spoils}}" wx:key="{{index}}" src="/images/item/{{item.icon}}.png"></image>
+          <image class="fate-spoils-img" wx:if="{{item.isRabbit}}" src="/images/item/hlb.png"></image>
         </view>
       </view>
     </view>

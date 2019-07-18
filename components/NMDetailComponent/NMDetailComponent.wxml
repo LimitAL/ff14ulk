@@ -23,12 +23,16 @@
             </view>
           </view>
         </view>
-        <view class="spoils-area" wx:if="{{BList.length>0}}">
+        <view class="spoils-area" wx:if="{{BList.length > 0 || data.isRabbit}}">
           <text class="spoils-label">概率掉落</text>
           <view class="spoils-content">
             <view class="row inline" wx:for="{{BList}}" wx:key="{{index}}">
               <image class="icon" src="/images/item/{{item.icon}}.png"></image>
               <text>{{item.name}} x {{item.number}}</text>
+            </view>
+            <view class="row inline" wx:if="{{data.isRabbit}}">
+              <image class="icon" src="/images/item/hlb.png"></image>
+              <text>幸运胡萝卜</text>
             </view>
           </view>
         </view>
