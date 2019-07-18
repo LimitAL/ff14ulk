@@ -31,4 +31,8 @@
     <view>优雷卡天气预报</view>
     <view>https://eureka.ffxivsc.cn/weather.htm</view>
   </view>
+  <view class="item">
+    <view class="title">制作者</view>
+    <view>陆行鸟 —— 橙夏w @ 紫水栈桥</view>
+  </view>
 </view>
