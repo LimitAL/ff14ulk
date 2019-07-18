@@ -1,0 +1,75 @@
+/* pages/nm/nm.wxss */
+
+.container {
+  height: 100%;
+  font-size: 32rpx;
+}
+
+.tab {
+  justify-content: space-around;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.tab-item:not(:last-child) {
+  border-right: 2rpx solid #ccc;
+}
+
+.tab-item {
+  padding: 20rpx 0;
+  width: 25%;
+  text-align: center;
+}
+
+.selected {
+  background-color: #1296db;
+  color: #fff;
+}
+
+.content {
+  position: absolute;
+  top: 80rpx;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #dfdfdf;
+  font-size: 28rpx;
+}
+
+.fate-item {
+  margin: 20rpx;
+  background-color: #fff;
+}
+
+.fate-header {
+  padding: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fate-header-left {
+  align-items: center;
+}
+
+.fate-img {
+  margin-right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.body {
+  margin-top: 10rpx;
+  border-top: 2rpx solid #ccc;
+  padding: 10rpx 20rpx;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.fate-place {
+  width: 200rpx;
+}
+
+.fate-spoils-img {
+  width: 40rpx;
+  height: 40rpx;
+}

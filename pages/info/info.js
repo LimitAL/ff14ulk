@@ -6,6 +6,7 @@ Page({
    */
   data: {
     items: [
+      { interval: false, type: 'nav', text: '恶名精英图鉴', icon: 'nm', src: '/pages/nm/nm' },
       { interval: false, type: 'nav', text: '优雷卡天气预报', icon: 'weather', src: '/pages/weather/weather' },
       { interval: true, type: 'btn', text: '清除缓存', icon: 'clear', src: 'clearStorage' },
       { interval: false, type: 'nav', text: '关于', icon: 'info', src: '/pages/logs/logs' }

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "恶名精英",
+  "usingComponents": {
+    "NMDetailComponent": "/components/NMDetailComponent/NMDetailComponent"
+  }
+}

@@ -2,6 +2,7 @@
   "pages": [
     "pages/info/info",
     "pages/index/index",
+    "pages/nm/nm",
     "pages/fuse/fuse",
     "pages/weather/weather",
     "pages/logs/logs",

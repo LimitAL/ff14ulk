@@ -1,0 +1,8 @@
+function triggerMonsterName(str) {
+  var index = str.indexOf('[');
+  return index > -1 ? str.slice(0, index) : str;
+}
+
+module.exports = {
+  triggerMonsterName: triggerMonsterName
+}

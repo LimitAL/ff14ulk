@@ -1,0 +1,95 @@
+/* components/NMDetailComponent/NMDetailComponent.wxss */
+
+@import '../../app.wxss';
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 28rpx;
+}
+
+.content {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  left: 40rpx;
+  bottom: 40rpx;
+  border-radius: 14rpx;
+  background-color: #fff;
+  color: #333;
+}
+
+.header {
+  justify-content: space-between;
+}
+
+.item {
+  position: relative;
+  padding: 20rpx;
+  margin: 20rpx 0;
+}
+
+.item-title {
+  position: absolute;
+  left: 20rpx;
+  top: -25rpx;
+  padding: 5rpx 10rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 32rpx;
+  align-content: center;
+}
+
+.fate-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 20rpx;
+  top: 100rpx;
+  left: 0;
+  right: 0;
+}
+
+.item:not(:first-child) {
+  border-top: 2rpx solid #ccc;
+}
+
+.description {
+  text-indent: 2em;
+}
+
+.spoils-area {
+  position: relative;
+  margin: 20rpx 5rpx;
+  border: 2rpx dashed #dfdfdf;
+  padding: 20rpx 10rpx;
+}
+
+.inline {
+  align-content: center;
+  margin: 5rpx 0;
+}
+
+.icon {
+  margin: 0 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.spoils-label {
+  position: absolute;
+  top: -22rpx;
+  left: 20rpx;
+  padding: 5rpx 10rpx;
+  background-color: #fff;
+}

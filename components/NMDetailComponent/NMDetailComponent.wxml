@@ -1,0 +1,38 @@
+<!--components/NMDetailComponent/NMDetailComponent.wxml-->
+<view class="container" wx:if="{{show}}" catchtap="onTapClose">
+  <view class="content column">
+    <view class="item header row">
+      <view class="title row">
+        <image class="fate-icon" src="/images/item/FATE.png"></image>
+        <text>{{data.name}}</text>
+      </view>
+      <text class="level">Lv.{{data.level}}</text>
+    </view>
+    <scroll-view class="scroll" scroll-y>
+      <view class="item">
+        <view class="description">{{data.description || '暂无'}}</view>
+      </view>
+      <view class="item column">
+        <view class="item-title">掉落</view>
+        <view class="spoils-area">
+          <text class="spoils-label">必定掉落</text>
+          <view class="spoils-content">
+            <view class="row inline" wx:for="{{AList}}" wx:key="{{index}}">
+              <image class="icon" src="/images/item/{{item.icon}}.png"></image>
+              <text>{{item.name}} x {{item.number}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="spoils-area" wx:if="{{BList.length>0}}">
+          <text class="spoils-label">概率掉落</text>
+          <view class="spoils-content">
+            <view class="row inline" wx:for="{{BList}}" wx:key="{{index}}">
+              <image class="icon" src="/images/item/{{item.icon}}.png"></image>
+              <text>{{item.name}} x {{item.number}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

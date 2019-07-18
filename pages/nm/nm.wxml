@@ -1,0 +1,28 @@
+<!--pages/nm/nm.wxml-->
+<wxs src="../../utils/nm.wxs" module="tools" />
+<view class="container column">
+  <view class="tab row">
+    <view class="tab-item {{index === current?'selected':''}}" wx:for="{{areas}}" wx:key="{{index}}" catchtap="onTapArea" data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <scroll-view class="content" scroll-y>
+    <view class="fate-item" wx:for="{{NM[areas[current].tag]}}" wx:key="{{index}}" catchtap="onTapItem" data-index='{{index}}'>
+      <view class="fate-header row">
+        <view class="fate-header-left row">
+          <image class="fate-img" src="/images/item/FATE.png"></image>
+          <text class="fate-name">{{item.name}}</text>
+        </view>
+        <text class="fate-level">Lv {{item.level}}</text>
+      </view>
+      <view class="body row">
+        <view class="row">
+          <text class="fate-place">位置:{{item.place}}</text>
+          <text class="fate-trigger" wx:if="{{item.trigger}}">触发:{{tools.triggerMonsterName(item.trigger)}}</text>
+        </view>
+        <view class="fate-spoils row">
+          <image class="fate-spoils-img" wx:for="{{item.spoils}}" wx:key="{{index}}" src="/images/item/{{item.icon}}.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<NMDetailComponent show="{{detailModal}}" data="{{content}}" bind:close="onCloseModal"></NMDetailComponent>
