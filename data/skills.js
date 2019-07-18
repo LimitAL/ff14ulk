@@ -188,7 +188,7 @@ const skills = [{
   type: 2,
   launch: 0,
   repeat: 10,
-  keep: '180分钟'
+  keep: '180分'
 }, {
   id: 12,
   name: '文理护盾',
@@ -203,7 +203,7 @@ const skills = [{
   type: 0,
   launch: 2.5,
   repeat: 2.5,
-  keep: '30分钟'
+  keep: '30分'
 }, {
   id: 13,
   name: '文理魔盾',
@@ -219,7 +219,7 @@ const skills = [{
   type: 0,
   launch: 2.5,
   repeat: 2.5,
-  keep: '30分钟'
+  keep: '30分'
 }, {
   id: 14,
   name: '文理即死',
