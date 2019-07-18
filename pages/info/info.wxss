@@ -25,7 +25,7 @@
 
 .avator {
   position: absolute;
-  margin-top: 20rpx;
+  margin-top: 50rpx;
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
