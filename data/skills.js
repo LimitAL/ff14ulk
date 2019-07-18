@@ -184,7 +184,7 @@ const skills = [{
   isDirect: true,
   access: ['D', 'T', 'H'],
   number: 1,
-  description: '令自身最大体力提高10%，并且命中率提高30%|持续时间内若陷入无法战斗状态，有70%的概率自动复活|再次发动时则取消该状态',
+  description: '令自身最大体力提高10%，并且命中率提高30%|持续时间内若陷入无法战斗状态，有70%的概率自动复活',
   type: 2,
   launch: 0,
   repeat: 10,
@@ -657,7 +657,7 @@ const skills = [{
   type: 0,
   launch: 2.5,
   repeat: 2.5,
-  keep: '100秒'
+  keep: '300秒'
 }, {
   id: 41,
   name: '文理物理盾',

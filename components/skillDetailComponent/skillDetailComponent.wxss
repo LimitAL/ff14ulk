@@ -53,6 +53,17 @@
 }
 
 .job-nin {
+  width: inherit;
+  height: inherit;
   filter: grayscale(1);
   opacity: 0.5;
+}
+
+.disabled::before {
+  content: ' ';
+  position: absolute;
+  margin-top: 25rpx;
+  width: 50rpx;
+  height: 4rpx;
+  background-color: #f00;
 }

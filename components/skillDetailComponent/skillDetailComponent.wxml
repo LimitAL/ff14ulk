@@ -1,4 +1,5 @@
 <!--components/skillDetailComponent/skillDetailComponent.wxml-->
+<wxs src="../../utils/utils.wxs" module="tools" />
 <view class="container" wx:if="{{show}}" bindtap="onTapClose">
   <view class="body column">
     <view class="header row">
@@ -11,7 +12,7 @@
         <text wx:if="{{data.launch}}">发动时间：{{data.launch}}s</text>
         <text wx:else>发动时间：瞬发</text>
         <text>复唱时间：{{data.repeat}}s</text>
-        <text>效果时间：{{data.keep === null?'永久':data.keep}}</text>
+        <text wx:if="{{data.name}}">效果时间：{{tools.keepTime(data.name,data.keep)}}</text>
       </view>
     </view>
     <view class="content column">
@@ -19,7 +20,9 @@
     </view>
     <view class="access row">
       <image class="job-icon" wx:for="{{data.access}}" src="/images/jobType/30px-{{item}}.png" wx:key="{{index}}"></image>
-      <image class="job-icon job-nin" wx:if="{{data.id === 24}}" src="/images/jobType/nin.png"></image>
+      <view class="job-icon disabled" wx:if="{{data.id === 24}}">
+        <image class="job-nin" src="/images/jobType/nin.png"></image>
+      </view>
     </view>
   </view>
 </view>

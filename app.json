@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/fuse/fuse",
     "pages/index/index",
+    "pages/fuse/fuse",
     "pages/info/info",
     "pages/weather/weather",
     "pages/logs/logs",
