@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/weapon/weapon",
     "pages/index/index",
     "pages/nm/nm",
     "pages/info/info",

@@ -1,0 +1,99 @@
+/* pages/weapon/weapon.wxss */
+
+.container {
+  padding-bottom: 100rpx;
+  min-height: 100%;
+  background-color: #dfdfdf;
+  font-size: 32rpx;
+}
+
+.area-title {
+  margin: 10rpx 20rpx;
+}
+
+.item {
+  align-content: center;
+}
+
+.icon {
+  position: relative;
+  top: 5rpx;
+  margin-right: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.step {
+  margin: 10rpx 20rpx;
+  border: 2rpx solid transparent;
+  background-color: #fff;
+}
+
+.selected {
+  border: 2rpx solid #1296db;
+  background-color: #1296db;
+  color: #fff;
+}
+
+.header {
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ccc;
+  padding: 20rpx;
+}
+
+.body {
+  padding: 20rpx;
+  font-size: 26rpx;
+}
+
+.modal-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.control {
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #1296db;
+  border-radius: 6rpx;
+  padding: 10rpx 40rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.materials {
+  position: absolute;
+  top: 50rpx;
+  left: 40rpx;
+  right: 40rpx;
+  border-radius: 14rpx;
+  padding: 20rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+}
+
+.materials-item {
+  margin: 10rpx 20rpx;
+}
+
+.materials-title {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding-bottom: 20rpx;
+}
