@@ -3,6 +3,9 @@
 <view class="container row">
   <view class="left column">
     <view class="area-item {{index === current?'selected':''}}" wx:for="{{areas}}" wx:key="{{index}}" data-index="{{index}}" catchtap="onTapArea">{{item.name_sm}}</view>
+    <picker class="number-select" range="{{numberList}}" value="{{number}}" bindchange="onChangeNumber">
+      <view>数量:{{number}}</view>
+    </picker>
   </view>
   <view class="right column">
     <view class="now-time row">

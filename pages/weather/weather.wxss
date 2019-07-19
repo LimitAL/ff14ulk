@@ -5,13 +5,27 @@
 }
 
 .left {
+  position: relative;
   width: 150rpx;
   border-right: 2rpx solid #dfdfdf;
 }
 
 .area-item {
+  padding: 20rpx 0;
+  text-align: center;
   border-bottom: 2rpx solid #dfdfdf;
-  padding: 30rpx 20rpx;
+}
+
+.number-select {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10rpx 0;
+  background-color: #1296db;
+  color: #fff;
+  text-align: center;
+  font-size: 26rpx;
 }
 
 .selected {

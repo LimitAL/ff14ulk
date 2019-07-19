@@ -2,16 +2,18 @@
 const EorzeaClock = require('../../class/EorzeaClock.js');
 const EorzeaWeatherClass = require('../../class/EorzeaWeather.js');
 const eorzeaAreaWeather = require('../../data/eorzeaAreaWeather.js');
-const utils = require('../../utils/util.js')
+const utils = require('../../utils/util.js');
+const storage = require('../../utils/storage.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    EorzeaWeather: new EorzeaWeatherClass(),
     areas: eorzeaAreaWeather,
     current: 'anemos',
+    number: 10,
+    numberList: [5, 10, 15, 20, 25, 30],
     time: {
       date: '',
       now: '00:00'
@@ -24,8 +26,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.loop();
-    setInterval(this.loop.bind(this), 1000);
+    storage.getStorage('weatherNumber', function(res) {
+      if (res && this.data.numberList.indexOf(res) > -1) {
+        this.setData({
+          number: res
+        });
+        this.loop();
+        setInterval(this.loop.bind(this), 1000);
+      } else {
+        this.loop();
+        setInterval(this.loop.bind(this), 1000);
+      }
+    }.bind(this));
   },
 
   loop() {
@@ -52,7 +64,7 @@ Page({
     let ET = new EorzeaClock(undefined);
     let EorzeaWeather = new EorzeaWeatherClass();
     let baseTime = EorzeaWeather.calcBaseDate(ET);
-    let weatherSeeds = EorzeaWeather.forecastSeed(ET, Array.from({ length: 10 }).map(function(_, i) { return i; })); // 生成100个种子
+    let weatherSeeds = EorzeaWeather.forecastSeed(ET, Array.from({ length: this.data.number }).map(function(_, i) { return i; })); // 生成100个种子
     let forecast = EorzeaWeather.getForecast(this.data.current, weatherSeeds); // 获得时间种子
     let weathers = new Array();
     for (let index in forecast) {
@@ -94,6 +106,15 @@ Page({
       lastETHours: null
     });
     this.loop();
+  },
+
+  onChangeNumber(e) {
+    let index = e.detail.value;
+    this.setData({
+      number: this.data.numberList[index],
+      lastETHours: null
+    });
+    storage.setStorage('weatherNumber', this.data.numberList[index]);
   },
 
   /**
