@@ -28,7 +28,7 @@
   padding: 10rpx 20rpx;
   justify-content: space-between;
   background-color: #fff;
-  box-shadow: 10rpx 10rpx 10rpx #dfdfdf;
+  box-shadow: 10rpx 10rpx 10rpx #ccc;
 }
 
 .et-time {
@@ -52,7 +52,11 @@
 }
 
 .scroll {
-  height: 100%;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #dfdfdf;
 }
 
