@@ -12,6 +12,7 @@ function weatherCNtoStr(cn) {
     '薄雾': 'Fog',
     '热浪': 'blistering',
     '暴雷': 'Thunder',
+    '打雷': 'Thunder',
     '暴雪': 'blizzardy',
     '灵风': 'UmbralWind',
     '妖雾': 'Gloom',

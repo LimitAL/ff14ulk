@@ -17,7 +17,7 @@ const EorzeaAreaWeather = {
       { rate: 18, weather: "薄雾" },
       { rate: 18, weather: "热浪" },
       { rate: 18, weather: "小雪" },
-      { rate: 18, weather: "暴雷" },
+      { rate: 18, weather: "打雷" },
       { rate: -1, weather: "暴雪" },
     ],
   },
