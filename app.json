@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/info/info",
-    "pages/weather/weather",
     "pages/index/index",
     "pages/nm/nm",
+    "pages/info/info",
+    "pages/weather/weather",
     "pages/fuse/fuse",
     "pages/logs/logs",
     "pages/fuseDetail/fuseDetail",

@@ -166,6 +166,15 @@ class NmObject {
     this.experience = experience;
     this.light = light;
     this.trigger = trigger;
+    if (trigger) {
+      let triggerSlice = /(.*?)\[(\d+)\](\[(.*?)\])?(\[刷新：(.*?)\])?/.exec(trigger);
+      this.triggerObj = {
+        name: triggerSlice[1],
+        level: triggerSlice[2],
+        condition: triggerSlice[4],
+        conditionMonster: triggerSlice[6]
+      };
+    }
   }
 }
 
@@ -247,7 +256,7 @@ module.exports = {
     new NmObject(67, 58, '业火狮子王——巴隆', ['23|36', '31|8', '30|9', '39|1'], 'hydatos', false, '32,25', 24390235, 0, '实验室狮子[63]'),
     new NmObject(68, 59, '魔蛇女王——刻托', ['23|38', '31|8', '30|9', '36|1', '39|1'], 'hydatos', false, '36,14', 25699605, 0, '丰水达菲妮[64]'),
     new NmObject(69, 60, '水晶之龙——起源守望者', ['23|40', '31|9', '30|10', '37|3', '38|1'], 'hydatos', false, '32,19', 25699605, 0, '水晶蝎[65]'),
-    new NmObject(70, 60, '未知的威胁——不明飞行物', ['23|40', '31|9', '30|10', '32|1'], 'hydatos', false, '26,29', 25699605, 0, '乱灵流'),
+    new NmObject(70, 60, '未知的威胁——不明飞行物', ['23|40', '31|9', '30|10', '32|1'], 'hydatos', false, '26,29', 25699605, 0, ''),
     new NmObject(71, 60, '巴尔德西昂兵武塔调查支援', ['23|35', '31|7', '30|30'], 'hydatos', false, '18,28', 0, 0, ''),
   ]
 }

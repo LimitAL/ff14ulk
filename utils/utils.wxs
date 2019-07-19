@@ -40,9 +40,15 @@ function keepTime(name, value) {
   }
 }
 
+
+function numberToMoney(num) {
+  return parseInt(num).toLocaleString();
+}
+
 module.exports = {
   funcToCN: funcToCN,
   weatherCNtoStr: weatherCNtoStr,
   timeClass: timeClass,
-  keepTime: keepTime
+  keepTime: keepTime,
+  numberToMoney: numberToMoney
 }

@@ -1,4 +1,5 @@
 <!--components/NMDetailComponent/NMDetailComponent.wxml-->
+<wxs src="../../utils/utils.wxs" module="tools" />
 <view class="container" wx:if="{{show}}" catchtap="onTapClose">
   <view class="content column">
     <view class="item header row">
@@ -12,8 +13,47 @@
       <view class="item">
         <view class="description">{{data.description || '暂无'}}</view>
       </view>
+      <view class="item wrap row">
+        <view class="item-title">基本信息</view>
+        <!-- 经验 -->
+        <view class="base-info-item">
+          <view class="base-info-control">
+            <image class="base-info-img" src="/images/icon/experience.png"></image>
+            <text class="base-info-text">{{tools.numberToMoney(data.experience)}}</text>
+          </view>
+        </view>
+        <view class="base-info-item" wx:if="{{data.light}}">
+          <!-- 光 -->
+          <view class="base-info-control">
+            <image class="base-info-img" src="/images/icon/lightning.png"></image>
+            <text class="base-info-text">{{data.light}}%</text>
+          </view>
+        </view>
+        <view class="base-info-item">
+          <!-- 刷新地点 -->
+          <view class="base-info-control">
+            <image class="base-info-img" src="/images/icon/point.png"></image>
+            <text class="base-info-text">{{data.place}}</text>
+          </view>
+        </view>
+        <view class="base-info-item" wx:if="{{data.trigger && data.triggerObj.conditionMonster}}">
+          <!-- 天气要求 -->
+          <view class="base-info-control">
+            <image class="base-info-img" src="/images/icon/weather.png"></image>
+            <text class="base-info-text">{{data.triggerObj.conditionMonster}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="item wrap row" wx:if="{{data.triggerObj}}">
+        <view class="item-title">触发</view>
+        <view class="trigger row">
+          <view>{{data.triggerObj.name}}[Lv.{{data.triggerObj.level}}]</view>
+          <view>{{data.triggerObj.condition}}</view>
+        </view>
+      </view>
       <view class="item column">
         <view class="item-title">掉落</view>
+        <view class="rabbit-tip" wx:if="{{data.isRabbit}}">这是一个与幸福兔有关的恶名精英，参与将有概率获得“指引财宝”状态。</view>
         <view class="spoils-area">
           <text class="spoils-label">必定掉落</text>
           <view class="spoils-content">
@@ -23,17 +63,17 @@
             </view>
           </view>
         </view>
-        <view class="spoils-area" wx:if="{{BList.length > 0 || data.isRabbit}}">
+        <view class="spoils-area" wx:if="{{BList.length > 0}}">
           <text class="spoils-label">概率掉落</text>
           <view class="spoils-content">
             <view class="row inline" wx:for="{{BList}}" wx:key="{{index}}">
               <image class="icon" src="/images/item/{{item.icon}}.png"></image>
               <text>{{item.name}} x {{item.number}}</text>
             </view>
-            <view class="row inline" wx:if="{{data.isRabbit}}">
+            <!-- <view class="row inline" wx:if="{{data.isRabbit}}">
               <image class="icon" src="/images/item/hlb.png"></image>
               <text>幸运胡萝卜</text>
-            </view>
+            </view> -->
           </view>
         </view>
       </view>
