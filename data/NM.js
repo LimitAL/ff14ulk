@@ -122,7 +122,12 @@ const NMDescription = {
 class Spoils {
   constructor(id, number) {
     this.id = id;
-    this.number = number;
+    if (id == 13) {
+      // 恒冰水晶数量翻倍
+      this.number = number * 2;
+    } else {
+      this.number = number;
+    }
     this.isCertainly = spoilsList[id].isCertainly;
     this.name = spoilsList[id].name;
     this.icon = spoilsList[id].icon;
