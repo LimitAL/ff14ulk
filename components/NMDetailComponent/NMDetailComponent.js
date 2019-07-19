@@ -12,9 +12,20 @@ Component({
       type: Object,
       observer: function(obj) {
         if (Object.keys(obj).length > 0) {
+          let AList = new Array(),
+            BList = new Array();
+          for (let i in obj.spoils) {
+            if (obj.spoils[i].isCertainly) {
+              AList.push(obj.spoils[i]);
+            } else {
+              BList.push(obj.spoils[i]);
+            }
+          }
           this.setData({
-            AList: obj.spoils.filter(item => item.isCertainly === true),
-            BList: obj.spoils.filter(item => item.isCertainly === false)
+            AList: AList,
+            BList: BList
+              // AList: obj.spoils.filter(item => item.isCertainly === true),
+              // BList: obj.spoils.filter(item => item.isCertainly === false)
           });
         }
       }

@@ -17,7 +17,7 @@ const spoilsList = {
   15: { name: '速度腰带', icon: 'sdyd', isCertainly: false },
   16: { name: '贝希摩斯的毛皮', icon: 'bxmsdmp', isCertainly: false },
   17: { name: '贝希摩斯之角', icon: 'bxmszj', isCertainly: false },
-  18: { name: '发生变异的结冰上锁宝箱', icon: 'box', isCertainly: true },
+  18: { name: '发生变异的结冰上锁宝箱', icon: 'by-box', isCertainly: true },
   19: { name: '凯西耳坠', icon: 'kxez', isCertainly: false },
   20: { name: '娄希的冰片', icon: 'lxdbp', isCertainly: true },
   21: { name: '九宫幻卡：洛希', icon: 'hk-xtz', isCertainly: false },
@@ -262,6 +262,6 @@ module.exports = {
     new NmObject(68, 59, '魔蛇女王——刻托', ['23|38', '31|8', '30|9', '36|1', '39|1'], 'hydatos', false, '36,14', 25699605, 0, '丰水达菲妮[64]'),
     new NmObject(69, 60, '水晶之龙——起源守望者', ['23|40', '31|9', '30|10', '37|3', '38|1'], 'hydatos', false, '32,19', 25699605, 0, '水晶蝎[65]'),
     new NmObject(70, 60, '未知的威胁——不明飞行物', ['23|40', '31|9', '30|10', '32|1'], 'hydatos', false, '26,29', 25699605, 0, ''),
-    new NmObject(71, 60, '巴尔德西昂兵武塔调查支援', ['23|35', '31|7', '30|30'], 'hydatos', false, '18,28', 0, 0, ''),
+    new NmObject(71, 60, '巴尔德西昂兵武塔调查支援', ['23|35', '31|7', '30|30'], 'hydatos', false, '18,28', 25699605, 0, ''),
   ]
 }

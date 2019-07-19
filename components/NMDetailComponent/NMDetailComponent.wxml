@@ -15,10 +15,13 @@
       </view>
       <view class="item wrap row">
         <view class="item-title">基本信息</view>
+        <view class="rabbit-tip" wx:if="{{data.id === 27}}">这个恶名精英只有在当你背包中含有道具 —— “白泽的五行眼”时才能获得最高评价。</view>
+        <view class="rabbit-tip" wx:if="{{data.id === 70}}">这个恶名精英将在特定条件下自动刷新。击杀时所有在其任务范围内元素等级60级、并且开启了兵武塔任务的玩家都将会获得“传送准备”状态。</view>
+        <view class="rabbit-tip" wx:if="{{data.id === 71}}">这个恶名精英由兵武塔内的玩家主动触发。击杀时所有在其任务范围内元素等级60级、并且开启了兵武塔任务的玩家都将会获得“传送准备”状态。</view>
         <!-- 经验 -->
         <view class="base-info-item">
           <view class="base-info-control">
-            <image class="base-info-img" src="/images/icon/experience.png"></image>
+            <image class="base-info-img" src="/images/item/exp.png"></image>
             <text class="base-info-text">{{tools.numberToMoney(data.experience)}}</text>
           </view>
         </view>
