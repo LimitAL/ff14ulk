@@ -37,3 +37,23 @@ page {
   text-indent: 2em;
   color: #999;
 }
+
+.bgc-primary {
+  background-color: #2d8cf0;
+}
+
+.bgc-success {
+  background-color: #19be6b;
+}
+
+.bgc-danger {
+  background-color: #f90;
+}
+
+.bgc-error {
+  background-color: #ed4014;
+}
+
+.bgc-info {
+  background-color: #2db7f5;
+}

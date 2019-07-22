@@ -25,7 +25,8 @@ Page({
 
     function render(data) {
       let result = new Array();
-      let obj = new Object();
+      let obj = new Object(),
+        probability;
       data.forEach(element => {
         for (let i in element) {
           obj[i] = {
@@ -34,10 +35,12 @@ Page({
           }
           obj[i].skill = utils.processFromData(obj[i].skill, skills.skills);
         }
+        probability = _self.processProbability(obj.astral.skill.from[obj.astral.scheme], obj.ombral.skill.from[obj.ombral.scheme]);
         result.push({
           astral: obj.astral,
           ombral: obj.ombral,
-          modal: false
+          modal: false,
+          probability: probability
         });
       });
       _self.setData({
@@ -115,11 +118,6 @@ Page({
   delete(e) {
     let currentIndex = e.currentTarget.dataset.index;
     let _self = this;
-    // wx.showToast({
-    //   title: '如果你看到这条消息，说明微信当前的Modal功能存在异常，删除操作暂时无法进行。',
-    //   icon: 'none',
-    //   duration: 3000
-    // });
     wx.showModal({
       title: '删除融合组合',
       content: '将要删除技能组合\r\n' + this.data.fuseList[currentIndex].astral.skill.name + '+' + this.data.fuseList[currentIndex].ombral.skill.name,
@@ -145,6 +143,28 @@ Page({
     }
     data.skillDetailShow = show;
     this.setData(data);
+  },
+
+  // 计算合成成功率
+  processProbability(astral, ombral) {
+    let astralNum = 0,
+      ombralNum = 0;
+    astral.forEach(element => {
+      astralNum += element.num;
+    });
+    ombral.forEach(element => {
+      ombralNum += element.num;
+    });
+    switch (astralNum + ombralNum) {
+      case 4:
+        return 70;
+      case 5:
+        return 50;
+      case 6:
+        return 30;
+      default:
+        throw Error('Probability Error');
+    }
   },
 
   /**

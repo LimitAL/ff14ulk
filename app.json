@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/fuse/fuse",
     "pages/index/index",
     "pages/weapon/weapon",
     "pages/nm/nm",
     "pages/info/info",
     "pages/weather/weather",
-    "pages/fuse/fuse",
     "pages/logs/logs",
     "pages/fuseDetail/fuseDetail",
     "pages/baimage/baimage"

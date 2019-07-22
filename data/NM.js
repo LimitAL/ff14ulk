@@ -128,7 +128,7 @@ class Spoils {
   constructor(id, number) {
     this.id = id;
     if (id == 13 || id == 24) {
-      // 恒冰水晶数量翻倍
+      // 数量翻倍
       this.number = number * 2;
     } else {
       this.number = number;
