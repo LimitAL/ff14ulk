@@ -26,17 +26,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    storage.getStorage('weatherNumber', function(res) {
-      if (res && this.data.numberList.indexOf(res) > -1) {
+    // 首先加载缓存内是否存在预先加载区域
+    storage.getStorage('weather_pre', function(res) {
+      if (res) {
         this.setData({
-          number: res
+          current: res
         });
-        this.loop();
-        setInterval(this.loop.bind(this), 1000);
-      } else {
-        this.loop();
-        setInterval(this.loop.bind(this), 1000);
       }
+      // 检查完成后，再从缓存加载上一次使用的天气数量
+      storage.getStorage('weatherNumber', function(res) {
+        if (res && this.data.numberList.indexOf(res) > -1) {
+          this.setData({
+            number: res
+          });
+        }
+        this.loop();
+        setInterval(this.loop.bind(this), 1000);
+      }.bind(this));
     }.bind(this));
   },
 
@@ -106,6 +112,7 @@ Page({
       lastETHours: null
     });
     this.loop();
+    storage.setStorage('weather_pre', index);
   },
 
   onChangeNumber(e) {
@@ -116,53 +123,4 @@ Page({
     });
     storage.setStorage('weatherNumber', this.data.numberList[index]);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  }
 })
