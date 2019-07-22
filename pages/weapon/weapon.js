@@ -44,9 +44,6 @@ Page({
     if (data.current[0] > data.current[1]) {
       data.current = [data.current[1], data.current[0]];
     }
-    // console.log(data.current);
-    // data.current.sort();
-    // console.log(data.current);
     this.filterData(data.current);
     this.setData(data);
   },

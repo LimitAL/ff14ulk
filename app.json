@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/weapon/weapon",
     "pages/index/index",
+    "pages/weapon/weapon",
     "pages/weather/weather",
     "pages/nm/nm",
     "pages/fuse/fuse",
