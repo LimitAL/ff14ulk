@@ -46,6 +46,11 @@ Page({
     }.bind(this));
   },
 
+  onUnload: function() {
+    clearInterval();
+    clearTimeout();
+  },
+
   loop() {
     let ET = new EorzeaClock(undefined);
     let EorzeaWeather = new EorzeaWeatherClass();

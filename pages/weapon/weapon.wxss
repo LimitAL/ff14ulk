@@ -44,6 +44,7 @@
 .body {
   padding: 20rpx;
   font-size: 26rpx;
+  justify-content: space-between;
 }
 
 .modal-global {
@@ -96,4 +97,28 @@
   margin-bottom: 20rpx;
   border-bottom: 2rpx solid #ccc;
   padding-bottom: 20rpx;
+}
+
+.weapon-item {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.weapon-icon {
+  display: block;
+  margin: 0 auto;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.weapon-options {
+  width: 33%;
+  height: 150rpx;
+  text-align: center;
+}
+
+.weapon-btn {
+  padding: 5rpx 10rpx;
+  height: 38rpx;
+  color: #fff;
 }

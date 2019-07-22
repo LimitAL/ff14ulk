@@ -17,6 +17,9 @@
             <text>{{mitem.name}} x {{mitem.number}}</text>
           </view>
         </view>
+        <view class="weapon-btn bgc-info" catchtap="onTapShowWeapon" data-id="{{citem.id}}">
+          相关武器
+        </view>
       </view>
     </view>
   </view>
@@ -38,5 +41,19 @@
       <text>{{range[range.length - 1].afterLevel}}</text>
     </view>
     <view class="btn" catchtap="onTapCompute">计算</view>
+  </view>
+</view>
+
+<view class="modal column" wx:if="{{weaponsListModal}}" catchtap="onTapCloseWeaponList">
+  <view class="modal-global">
+    <view class="materials column">
+      <view class="materials-title">相关武器</view>
+      <view class="weapon-item row">
+        <view class="weapon-options column" wx:for="{{weaponsList}}" wx:key="{{index}}">
+          <image class="weapon-icon" src="/images/weapons/{{item.icon}}.png"></image>
+          <text class="weapon-text">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

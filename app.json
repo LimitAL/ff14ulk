@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/nm/nm",
-    "pages/weather/weather",
-    "pages/fuse/fuse",
-    "pages/index/index",
     "pages/weapon/weapon",
+    "pages/index/index",
+    "pages/weather/weather",
+    "pages/nm/nm",
+    "pages/fuse/fuse",
     "pages/info/info",
     "pages/logs/logs",
     "pages/fuseDetail/fuseDetail",

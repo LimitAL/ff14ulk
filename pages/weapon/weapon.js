@@ -11,7 +11,9 @@ Page({
     current: [null, null],
     weaponsAllList: [...weapons.anemos, ...weapons.pagos, ...weapons.pyros, ...weapons.hydatos],
     range: [],
-    list: []
+    list: [],
+    weaponsList: {},
+    weaponsListModal: false
   },
 
   /**
@@ -39,7 +41,12 @@ Page({
         data.current = [this.data.current[1], id];
       }
     }
-    data.current.sort();
+    if (data.current[0] > data.current[1]) {
+      data.current = [data.current[1], data.current[0]];
+    }
+    // console.log(data.current);
+    // data.current.sort();
+    // console.log(data.current);
     this.filterData(data.current);
     this.setData(data);
   },
@@ -87,6 +94,19 @@ Page({
   onTapClose() {
     this.setData({
       list: []
+    });
+  },
+
+  onTapShowWeapon(e) {
+    let id = e.currentTarget.dataset.id;
+    this.setData({
+      weaponsListModal: true,
+      weaponsList: this.data.weaponsAllList.find(item => item.id == id).weapons
+    });
+  },
+  onTapCloseWeaponList() {
+    this.setData({
+      weaponsListModal: false
     });
   }
 })
