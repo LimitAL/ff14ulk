@@ -21,28 +21,28 @@
         <!-- 经验 -->
         <view class="base-info-item">
           <view class="base-info-control">
-            <image class="base-info-img" src="/images/item/exp.png"></image>
+            <image class="base-info-img icon-30" src="/images/icon/experience.png"></image>
             <text class="base-info-text">{{tools.numberToMoney(data.experience)}}</text>
           </view>
         </view>
         <view class="base-info-item" wx:if="{{data.light}}">
           <!-- 光 -->
           <view class="base-info-control">
-            <image class="base-info-img" src="/images/icon/lightning.png"></image>
+            <image class="base-info-img icon-30" src="/images/icon/lights.png"></image>
             <text class="base-info-text">{{data.light}}%</text>
           </view>
         </view>
         <view class="base-info-item">
           <!-- 刷新地点 -->
           <view class="base-info-control">
-            <image class="base-info-img" src="/images/icon/point.png"></image>
+            <image class="base-info-img icon-30" src="/images/icon/placeholder.png"></image>
             <text class="base-info-text">{{data.place}}</text>
           </view>
         </view>
         <view class="base-info-item" wx:if="{{data.trigger && data.triggerObj.conditionMonster}}">
           <!-- 天气要求 -->
           <view class="base-info-control">
-            <image class="base-info-img" src="/images/icon/weather.png"></image>
+            <image class="base-info-img icon-30" src="/images/info/weather.png"></image>
             <text class="base-info-text">{{data.triggerObj.conditionMonster}}</text>
           </view>
         </view>

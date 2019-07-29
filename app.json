@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/brokenCrystal/brokenCrystal",
+    "pages/nm/nm",
     "pages/weapon/weapon",
     "pages/weather/weather",
-    "pages/nm/nm",
     "pages/fuse/fuse",
     "pages/info/info",
     "pages/logs/logs",

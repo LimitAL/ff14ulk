@@ -7,8 +7,8 @@ page {
 }
 
 .ui-tag {
-  padding: 6rpx 16rpx;
-  border-radius: 7px;
+  padding: 4rpx 16rpx;
+  border-radius: 7rpx;
   color: #fff;
 }
 
@@ -56,4 +56,34 @@ page {
 
 .bgc-info {
   background-color: #2db7f5;
+}
+
+.icon-30 {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.icon-40 {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon-50 {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.icon-60 {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.icon-70 {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.icon-80 {
+  width: 80rpx;
+  height: 80rpx;
 }
