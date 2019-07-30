@@ -45,5 +45,8 @@
         "selectedIconPath": "/images/tabBar/info-selected.png"
       }
     ]
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx895a7377514cce46"
+  ]
 }

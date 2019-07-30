@@ -150,10 +150,10 @@ Page({
     let astralNum = 0,
       ombralNum = 0;
     astral.forEach(element => {
-      astralNum += element.num;
+      astralNum += Number(element.num);
     });
     ombral.forEach(element => {
-      ombralNum += element.num;
+      ombralNum += Number(element.num);
     });
     switch (astralNum + ombralNum) {
       case 4:
