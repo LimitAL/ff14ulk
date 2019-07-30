@@ -47,8 +47,20 @@ function getLocalTime(date) {
   return new Date(parseInt(nS)).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
 }
 
+function miniTo(key) {
+  wx.navigateToMiniProgram({
+    appId: 'wx895a7377514cce46',
+    path: 'page/itemDetail/itemDetail',
+    extraData: {
+      type: 'Item',
+      value: key
+    }
+  });
+}
+
 module.exports = {
   formatTime: formatTime,
   processFromData,
-  getLocalTime
+  getLocalTime,
+  miniTo
 }

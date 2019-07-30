@@ -1,5 +1,6 @@
 // pages/weapon/weapon.js
 const weapons = require('../../data/weapons.js');
+const utils = require('../../utils/util.js');
 Page({
 
   /**
@@ -105,5 +106,10 @@ Page({
     this.setData({
       weaponsListModal: false
     });
+  },
+
+  searchItem(e) {
+    let value = e.currentTarget.dataset.value;
+    utils.miniTo(value);
   }
 })

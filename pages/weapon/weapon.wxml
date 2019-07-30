@@ -49,7 +49,7 @@
     <view class="materials column">
       <view class="materials-title">相关武器</view>
       <view class="weapon-item row">
-        <view class="weapon-options column" wx:for="{{weaponsList}}" wx:key="{{index}}">
+        <view class="weapon-options column" wx:for="{{weaponsList}}" wx:key="{{index}}" catchtap="searchItem" data-value="{{item.name}}">
           <image class="weapon-icon" src="/images/weapons/{{item.icon}}.png"></image>
           <text class="weapon-text">{{item.name}}</text>
         </view>
