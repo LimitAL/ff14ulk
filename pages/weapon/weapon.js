@@ -110,6 +110,7 @@ Page({
 
   searchItem(e) {
     let value = e.currentTarget.dataset.value;
+    console.log('into mini');
     utils.miniTo(value);
   }
 })

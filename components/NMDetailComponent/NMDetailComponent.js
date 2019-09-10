@@ -1,4 +1,5 @@
 // components/NMDetailComponent/NMDetailComponent.js
+const utils = require('../../utils/util.js');
 Component({
   /**
    * 组件的属性列表
@@ -24,8 +25,8 @@ Component({
           this.setData({
             AList: AList,
             BList: BList
-              // AList: obj.spoils.filter(item => item.isCertainly === true),
-              // BList: obj.spoils.filter(item => item.isCertainly === false)
+            // AList: obj.spoils.filter(item => item.isCertainly === true),
+            // BList: obj.spoils.filter(item => item.isCertainly === false)
           });
         }
       }
@@ -46,6 +47,12 @@ Component({
   methods: {
     onTapClose() {
       this.triggerEvent('close', false);
+    },
+
+    searchItem(e) {
+      let value = e.currentTarget.dataset.value;
+      console.log('into mini');
+      utils.miniTo(value);
     }
   }
 })

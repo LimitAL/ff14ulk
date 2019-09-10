@@ -42,12 +42,12 @@ const weaponIcon = {
     new WeaponClass(29, '沙玛什·改', 'Shamash')
   ],
   DRK: [
-    new WeaponClass(30, '斩裂剑卡拉德博尔格', 'Caladbolg'),
-    new WeaponClass(31, '斩裂剑卡拉德博尔格+1', 'Caladbolg'),
-    new WeaponClass(32, '斩裂剑卡拉德博尔格+2', 'Caladbolg'),
-    new WeaponClass(33, '斩裂剑卡拉德博尔格·常风', 'Caladbolg'),
-    new WeaponClass(34, '斩裂剑卡拉德博尔格·恒冰', 'Caladbolg'),
-    new WeaponClass(35, '斩裂剑卡拉德博尔格·恒冰+1', 'Caladbolg'),
+    new WeaponClass(30, '裂斩剑卡拉德博尔格', 'Caladbolg'),
+    new WeaponClass(31, '裂斩剑卡拉德博尔格+1', 'Caladbolg'),
+    new WeaponClass(32, '裂斩剑卡拉德博尔格+2', 'Caladbolg'),
+    new WeaponClass(33, '裂斩剑卡拉德博尔格·常风', 'Caladbolg'),
+    new WeaponClass(34, '裂斩剑卡拉德博尔格·恒冰', 'Caladbolg'),
+    new WeaponClass(35, '裂斩剑卡拉德博尔格·恒冰+1', 'Caladbolg'),
     new WeaponClass(36, '元素断头剑', 'ElementalGuillotine'),
     new WeaponClass(37, '元素断头剑+1', 'ElementalGuillotine'),
     new WeaponClass(38, '元素断头剑+2', 'ElementalGuillotine'),

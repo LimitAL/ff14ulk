@@ -12,7 +12,7 @@
       </view>
       <view class="body row">
         <view class="column">
-          <view class="item row" wx:for="{{citem.materials}}" wx:key="{{index}}" wx:for-item="mitem">
+          <view class="item row" wx:for="{{citem.materials}}" wx:key="{{index}}" wx:for-item="mitem" catchtap="searchItem" data-value="{{mitem.name}}">
             <image class="icon" src="/images/item/{{mitem.icon}}.png"></image>
             <text>{{mitem.name}} x {{mitem.number}}</text>
           </view>
@@ -29,7 +29,7 @@
   <view class="modal-global" wx:if="{{list.length > 0}}" catchtap="onTapClose">
     <view class="materials column">
       <view class="materials-title">所需素材</view>
-      <view class="item row" wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class="item row" wx:for="{{list}}" wx:key="{{item.id}}" catchtap="searchItem" data-value="{{item.name}}">
         <image class="icon" src="/images/item/{{item.icon}}.png"></image>
         <text>{{item.name}} x {{item.number}}</text>
       </view>

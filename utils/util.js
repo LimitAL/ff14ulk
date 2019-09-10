@@ -50,10 +50,17 @@ function getLocalTime(date) {
 function miniTo(key) {
   wx.navigateToMiniProgram({
     appId: 'wx895a7377514cce46',
-    path: 'page/itemDetail/itemDetail',
+    path: 'pages/item/item',
+    envVersion: 'trial',
     extraData: {
       type: 'Item',
       value: key
+    },
+    success: function() {
+      console.log('success');
+    },
+    fail: function(e) {
+      console.log('error', e);
     }
   });
 }

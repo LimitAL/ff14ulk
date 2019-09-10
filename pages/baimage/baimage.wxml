@@ -1,10 +1,8 @@
 <!--pages/baimage/baimage.wxml-->
 <view class="container">
-  <movable-area class="area" scale-area="true">
-    <movable-view class="view" direction="all" x="{{x}}" scale="true" scale-max="2" out-of-bounds="{{true}}" bindscale="onScale">
-      <image class="map" src="/images/BA/BA-portals.jpg" style="left: -{{left}}px">
-
-      </image>
+  <movable-area class="area" scale-area>
+    <movable-view class="view" direction="all" scale scale-value="0.5">
+      <image class="map" src="/images/BA/BA-portals.jpg" />
     </movable-view>
   </movable-area>
 </view>

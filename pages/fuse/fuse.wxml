@@ -2,7 +2,7 @@
 <view class="container" bindtap="onTapGlobal">
   <view class="item column" wx:for="{{fuseList}}" wx:key="{{index}}" catchlongpress="delete" data-index="{{index}}">
     <view class="header row">
-      <view class="probability {{item.probability === 70?'bgc-primary':item.probability===50?'bgc-danger':'bgc-error'}}">{{item.probability}}%</view>
+      <view class="probability {{item.probability >= 70?'bgc-primary':item.probability===50?'bgc-danger':'bgc-error'}}">{{item.probability}}%</view>
       <view class="btn-area">
         <view class="modal" wx:if="{{item.modal}}">
           <view class="modal-item" catchtap="edit" data-index="{{index}}">编辑</view>

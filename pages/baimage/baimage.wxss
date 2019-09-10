@@ -1,13 +1,17 @@
-/* pages/baimage/baimage.wxss */
-
-.area {
-  width: 500%;
-}
-
-.view {
-  width: 1500rpx;
-}
-
-.map {
-  position: relative;
-}
+  /* pages/baimage/baimage.wxss */
+  
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .area {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .view,
+  .map {
+    width: 1909px;
+    height: 1521px;
+  }

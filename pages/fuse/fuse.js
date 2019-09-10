@@ -155,7 +155,12 @@ Page({
     ombral.forEach(element => {
       ombralNum += Number(element.num);
     });
-    switch (astralNum + ombralNum) {
+    let result = astralNum + ombralNum;
+    switch (result) {
+      case 1:
+      case 2:
+      case 3:
+        return 100;
       case 4:
         return 70;
       case 5:
@@ -163,7 +168,7 @@ Page({
       case 6:
         return 30;
       default:
-        throw Error('Probability Error');
+        throw Error('Probability Error :' + result);
     }
   },
 

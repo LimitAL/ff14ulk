@@ -60,7 +60,7 @@
         <view class="spoils-area">
           <text class="spoils-label">必定掉落</text>
           <view class="spoils-content">
-            <view class="row inline" wx:for="{{AList}}" wx:key="{{index}}">
+            <view class="row inline" wx:for="{{AList}}" wx:key="{{index}}" catchtap="searchItem" data-value="{{item.name}}">
               <image class="icon" src="/images/item/{{item.icon}}.png"></image>
               <text>{{item.name}} x {{item.number}}</text>
             </view>
@@ -69,7 +69,7 @@
         <view class="spoils-area" wx:if="{{BList.length > 0}}">
           <text class="spoils-label">概率掉落</text>
           <view class="spoils-content">
-            <view class="row inline" wx:for="{{BList}}" wx:key="{{index}}">
+            <view class="row inline" wx:for="{{BList}}" wx:key="{{index}}" catchtap="searchItem" data-value="{{item.name}}">
               <image class="icon" src="/images/item/{{item.icon}}.png"></image>
               <text>{{item.name}} x {{item.number}}</text>
             </view>
