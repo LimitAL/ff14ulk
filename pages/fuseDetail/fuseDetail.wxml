@@ -24,7 +24,7 @@
       <text class="tips" style="opacity: {{ombralIndex == -1 && ombral.from.length>0 ?1:0}}">请在以下合成方式中选择一项希望使用的合成方式</text>
       <view class="select-item {{ombralIndex === index?'selected':''}}" wx:for="{{ombral.from}}" wx:key="index" catchtap="onTapFrom" data-type="ombral" data-index="{{index}}">
         <text class="ui-tag ui-tag-success">方式{{tools.funcToCN(index)}}：</text>
-        <view class="select-item-option" wx:for="{{item}}" wx:for-item="citem" wx:key="{{citem.fid}}">{{citem.obj.name}} * {{citem.num}}</view>
+        <view class="select-item-option" wx:for="{{item}}" wx:for-item="citem" wx:key="fid">{{citem.obj.name}} * {{citem.num}}</view>
       </view>
     </view>
   </view>

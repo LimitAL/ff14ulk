@@ -1,8 +1,8 @@
 <!--pages/weapon/weapon.wxml-->
 <view class="container column">
-  <view class="area" wx:for="{{weapons}}" wx:key="{{index}}">
+  <view class="area" wx:for="{{weapons}}" wx:key="index">
     <view class="area-title">{{tags[index]}}</view>
-    <view class="step column {{current[0] == citem.id || current[1] == citem.id?'selected':''}}" wx:for="{{item}}" wx:key="{{cindex}}" wx:for-item="citem" wx:for-index="cindex" catchtap="onTapStep" data-id="{{citem.id}}">
+    <view class="step column {{current[0] == citem.id || current[1] == citem.id?'selected':''}}" wx:for="{{item}}" wx:key="cindex" wx:for-item="citem" wx:for-index="cindex" catchtap="onTapStep" data-id="{{citem.id}}">
       <view class="header row">
         <text>{{citem.name}}</text>
         <view class="row">
@@ -12,7 +12,7 @@
       </view>
       <view class="body row">
         <view class="column">
-          <view class="item row" wx:for="{{citem.materials}}" wx:key="{{index}}" wx:for-item="mitem" catchtap="searchItem" data-value="{{mitem.name}}">
+          <view class="item row" wx:for="{{citem.materials}}" wx:key="index" wx:for-item="mitem" catchtap="searchItem" data-value="{{mitem.name}}">
             <image class="icon" src="/images/item/{{mitem.icon}}.png"></image>
             <text>{{mitem.name}} x {{mitem.number}}</text>
           </view>
@@ -29,7 +29,7 @@
   <view class="modal-global" wx:if="{{list.length > 0}}" catchtap="onTapClose">
     <view class="materials column">
       <view class="materials-title">所需素材</view>
-      <view class="item row" wx:for="{{list}}" wx:key="{{item.id}}" catchtap="searchItem" data-value="{{item.name}}">
+      <view class="item row" wx:for="{{list}}" wx:key="id" catchtap="searchItem" data-value="{{item.name}}">
         <image class="icon" src="/images/item/{{item.icon}}.png"></image>
         <text>{{item.name}} x {{item.number}}</text>
       </view>
@@ -49,7 +49,7 @@
     <view class="materials column">
       <view class="materials-title">相关武器</view>
       <view class="weapon-item row">
-        <view class="weapon-options column" wx:for="{{weaponsList}}" wx:key="{{index}}" catchtap="searchItem" data-value="{{item.name}}">
+        <view class="weapon-options column" wx:for="{{weaponsList}}" wx:key="index" catchtap="searchItem" data-value="{{item.name}}">
           <image class="weapon-icon" src="/images/weapons/{{item.icon}}.png"></image>
           <text class="weapon-text">{{item.name}}</text>
         </view>

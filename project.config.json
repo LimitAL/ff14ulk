@@ -39,6 +39,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
@@ -46,6 +50,13 @@
 					"id": -1,
 					"name": "pages/baimage/baimage",
 					"pathName": "pages/baimage/baimage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/brokenCrystal/brokenCrystal",
+					"pathName": "pages/brokenCrystal/brokenCrystal",
 					"scene": null
 				}
 			]

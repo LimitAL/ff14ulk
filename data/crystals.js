@@ -31,13 +31,15 @@ const source = {
     14: '适应后的不死系怪物'
   }
 }
+
 let getHydatos = function(...params) {
   let data = new Array();
-  params.forEach(item => {
+  params.forEach(item => { // [4]
     data.push(source.hydatos[item]);
   });
   return data;
 }
+
 let getPyros = function(...params) {
   let data = new Array();
   params.forEach(item => {
@@ -45,6 +47,7 @@ let getPyros = function(...params) {
   });
   return data;
 }
+
 const crystals = [{
   id: 1,
   name: '新锐',
