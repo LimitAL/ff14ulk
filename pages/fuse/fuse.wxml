@@ -1,6 +1,6 @@
 <!--pages/fuse/fuse.wxml-->
 <view class="container" bindtap="onTapGlobal">
-  <view class="item column" wx:for="{{fuseList}}" wx:key="{{index}}" catchlongpress="delete" data-index="{{index}}">
+  <view class="item column" wx:for="{{fuseList}}" wx:key="index" catchlongpress="delete" data-index="{{index}}">
     <view class="header row">
       <view class="probability {{item.probability >= 70?'bgc-primary':item.probability===50?'bgc-danger':'bgc-error'}}">{{item.probability}}%</view>
       <view class="btn-area">
@@ -22,7 +22,7 @@
           <text class="skill-name">{{item.astral.skill.name}}</text>
         </view>
         <view class="options-body">
-          <view class="scheme-item" wx:for="{{item.astral.skill.from[item.astral.scheme]}}" wx:key="{{index}}">
+          <view class="scheme-item" wx:for="{{item.astral.skill.from[item.astral.scheme]}}" wx:key="index">
             {{item.obj.name}} * {{item.num}}
           </view>
         </view>
@@ -35,7 +35,7 @@
           <text class="skill-name">{{item.ombral.skill.name}}</text>
         </view>
         <view class="options-body">
-          <view class="scheme-item" wx:for="{{item.ombral.skill.from[item.ombral.scheme]}}" wx:key="{{index}}">
+          <view class="scheme-item" wx:for="{{item.ombral.skill.from[item.ombral.scheme]}}" wx:key="index">
             {{item.obj.name}} * {{item.num}}
           </view>
         </view>

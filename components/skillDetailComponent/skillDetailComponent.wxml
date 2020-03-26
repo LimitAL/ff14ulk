@@ -16,10 +16,10 @@
       </view>
     </view>
     <view class="content column">
-      <text class="description" wx:for="{{data.description}}" wx:key="{{index}}">{{item}}</text>
+      <text class="description" wx:for="{{data.description}}" wx:key="index">{{item}}</text>
     </view>
     <view class="access row">
-      <image class="job-icon" wx:for="{{data.access}}" src="/images/jobType/30px-{{item}}.png" wx:key="{{index}}"></image>
+      <image class="job-icon" wx:for="{{data.access}}" src="/images/jobType/30px-{{item}}.png" wx:key="index"></image>
       <view class="job-icon disabled" wx:if="{{data.id === 24}}">
         <image class="job-nin" src="/images/jobType/nin.png"></image>
       </view>

@@ -5,14 +5,14 @@
   <view class="list" wx:if="{{modal}}">
     <!--  wx:if="{{modal}}" -->
     <view class="item no-data" wx:if="{{list.length===0}}">找不到符合条件的文理技能</view>
-    <view class="item" wx:for="{{list}}" wx:key="item.id" catchtap="onTapSkill" data-index="{{index}}">
+    <view class="item" wx:for="{{list}}" wx:key="id" catchtap="onTapSkill" data-index="{{index}}">
       <view class="no">{{item.id}}</view>
       <view class="icon">
         <image class="icon-images" src="/images/skills/{{item.id}}.png" />
       </view>
       <view class="name">{{item.name}}</view>
       <view class="access">
-        <view class="job" wx:for="{{item.access}}" wx:key="{{index}}">
+        <view class="job" wx:for="{{item.access}}" wx:key="index">
           <image src="/images/jobType/30px-{{item}}.png"></image>
         </view>
       </view>
