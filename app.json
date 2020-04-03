@@ -19,8 +19,12 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",
+    "backgroundColor": "#fff",
     "borderStyle": "white",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "文理技能",
         "iconPath": "/images/tabBar/skill.png",

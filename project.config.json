@@ -4,13 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
-		"postcss": true,
+		"postcss": false,
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": true,
-		"checkInvalidKey": true
+		"checkInvalidKey": true,
+		"nodeModules": true,
+		"uploadWithSourceMap": true,
+		"uglifyFileName": true,
+		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.1",
@@ -22,6 +26,8 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"qqappid": "1109632419",
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -50,6 +56,13 @@
 					"id": -1,
 					"name": "pages/baimage/baimage",
 					"pathName": "pages/baimage/baimage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/brokenCrystal/brokenCrystal",
+					"pathName": "pages/brokenCrystal/brokenCrystal",
 					"query": "",
 					"scene": null
 				},
