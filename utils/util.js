@@ -47,9 +47,12 @@ function getLocalTime(date) {
   return new Date(parseInt(nS)).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
 }
 
+const app = getApp();
+
 function miniTo(key) {
-  wx.navigateToMiniProgram({
-    appId: 'wx895a7377514cce46',
+  console.log(app);
+  const params = {
+    appId: '',
     path: 'pages/item/item',
     envVersion: 'trial',
     extraData: {
@@ -62,7 +65,14 @@ function miniTo(key) {
     fail: function(e) {
       console.log('error', e);
     }
-  });
+  }
+  if (app.globalData.env === 'wechat') {
+    params.appId = 'wx895a7377514cce46';
+    wx.navigateToMiniProgram(params);
+  } else {
+    params.appId = '1110321393';
+    qq.navigateToMiniProgram(params);
+  }
 }
 
 module.exports = {
