@@ -2,7 +2,7 @@
 <view class="container">
   <movable-area class="area" scale-area>
     <movable-view class="view" direction="all" scale scale-value="0.5">
-      <image class="map" src="/images/BA/BA-portals.jpg" />
+      <image class="map" src="/images/BA/BA-portals2.jpg" />
     </movable-view>
   </movable-area>
 </view>

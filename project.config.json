@@ -9,11 +9,24 @@
 		"postcss": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": true,
-		"checkInvalidKey": true,
+		"coverView": true,
 		"nodeModules": true,
-		"uploadWithSourceMap": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
 		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"compileHotReLoad": false,
 		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
@@ -70,6 +83,20 @@
 					"id": -1,
 					"name": "pages/brokenCrystal/brokenCrystal",
 					"pathName": "pages/brokenCrystal/brokenCrystal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
 					"scene": null
 				}
 			]

@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "文理技能合成表",
   "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
     "skillDetailComponent": "/components/skillDetailComponent/skillDetailComponent"
   }
 }

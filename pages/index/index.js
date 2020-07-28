@@ -92,7 +92,8 @@ Page({
   },
   // 搜索方法
   onInputSearch(e) {
-    let key = e.detail.value;
+    console.log(e);
+    let key = e.detail;
     let result = new Array();
     if (key) {
       result = skills.skills.filter(function(item) {

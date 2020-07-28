@@ -1,6 +1,14 @@
 /* components/skillDetailComponent/skillDetailComponent.wxss */
+.column {
+  display: flex;
+  flex-direction: column;
+}
 
-@import '../../app.wxss';
+.row {
+  display: flex;
+  flex-direction: row;
+}
+/* @import '../../app.wxss'; */
 .container {
   position: fixed;
   top: 0;

@@ -2,10 +2,11 @@
 <wxs src="../../utils/utils.wxs" module="tools" />
 <view class="container" bindtap="onClickGlobal">
   <!-- 搜索框 -->
-  <view class="search-container">
+  <van-search value="{{ keyword }}" placeholder="搜索,可输入技能名或首字母,如：xs" bind:change="onInputSearch" />
+  <!-- <view class="search-container">
     <input value="{{keyword}}" class="search" type="text" confirm-type="search" placeholder="搜索,可输入技能名或首字母,如：xs" bindinput="onInputSearch" />
     <icon wx:if="{{keyword}}" class="search-clear-btn" type="clear" size="60rpx" catchtap="onTapClearKeyword" />
-  </view>
+  </view> -->
   <!-- 主体内容 -->
   <view class="body">
     <!-- 左侧列表 -->
