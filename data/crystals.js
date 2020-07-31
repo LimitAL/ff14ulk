@@ -22,17 +22,18 @@ const source = {
     5: '雷暴元精（41级）',
     6: '30连锁',
     7: 'NM',
-    8: '发生变异的燃烧上锁宝箱',
+    8: '发生变异的爆炎上锁宝箱',
     9: '适应后的雷暴元精（52、54级）',
     10: '适应后的台风元精（55级）',
     11: '雷暴元精（46级）',
     12: '适应后的余烬元精（43级）',
     13: '适应后的雷暴元精（46级）',
-    14: '适应后的不死系怪物'
+    14: '适应后的不死系怪物',
+    15: '适应后的元精（50级以上）'
   }
 }
 
-let getHydatos = function(...params) {
+let getHydatos = function (...params) {
   let data = new Array();
   params.forEach(item => { // [4]
     data.push(source.hydatos[item]);
@@ -40,7 +41,7 @@ let getHydatos = function(...params) {
   return data;
 }
 
-let getPyros = function(...params) {
+let getPyros = function (...params) {
   let data = new Array();
   params.forEach(item => {
     data.push(source.pyros[item]);
@@ -69,8 +70,8 @@ const crystals = [{
   name: '攻势',
   data: [6, 28],
   from: {
-    hydatos: getHydatos(1),
-    pyros: getPyros(1, 8, 9)
+    hydatos: getHydatos(1, 9),
+    pyros: getPyros(1)
   }
 }, {
   id: 1,
@@ -78,7 +79,7 @@ const crystals = [{
   data: [4, 11],
   from: {
     hydatos: getHydatos(3),
-    pyros: getPyros(7, 1, 8)
+    pyros: getPyros(7, 1)
   }
 }, {
   id: 1,
@@ -93,16 +94,16 @@ const crystals = [{
   name: '斥候',
   data: [19, 24],
   from: {
-    hydatos: getHydatos(),
-    pyros: getPyros()
+    hydatos: getHydatos(10),
+    pyros: getPyros(8)
   }
 }, {
   id: 1,
   name: '妨碍',
   data: [20, 22],
   from: {
-    hydatos: getHydatos(10),
-    pyros: getPyros(8)
+    hydatos: getHydatos(2, 3),
+    pyros: getPyros(7, 15)
   }
 }, {
   id: 1,
@@ -110,7 +111,7 @@ const crystals = [{
   data: [34, 13],
   from: {
     hydatos: getHydatos(2),
-    pyros: getPyros(11, 12, 13, 14)
+    pyros: getPyros(11, 12, 1, 14)
   }
 }, {
   id: 1,

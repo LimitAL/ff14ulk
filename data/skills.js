@@ -476,7 +476,7 @@ const skills = [{
   isDirect: false,
   access: ['D', 'T', 'H'],
   number: 50,
-  description: '恢复自身500点技力，并且恢复最大魔力50%',
+  description: '恢复自身最大体力与魔力的50%',
   type: 2,
   launch: 0,
   repeat: 30,

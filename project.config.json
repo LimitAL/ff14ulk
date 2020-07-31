@@ -18,6 +18,7 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
@@ -26,7 +27,6 @@
 		"useIsolateContext": true,
 		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false,
-		"compileHotReLoad": false,
 		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
@@ -97,6 +97,13 @@
 					"id": -1,
 					"name": "pages/logs/logs",
 					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/brokenCrystal/brokenCrystal",
+					"pathName": "pages/brokenCrystal/brokenCrystal",
 					"scene": null
 				}
 			]

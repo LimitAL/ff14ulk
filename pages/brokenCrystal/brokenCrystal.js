@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    activeKey: 0,
+    crystals: crystals.crystals
   },
 
   /**
@@ -28,6 +29,13 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  onChange: function (e) {
+    const key = e.detail;
+    this.setData({
+      activeKey: key
+    });
   },
 
   /**

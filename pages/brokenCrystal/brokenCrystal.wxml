@@ -1,2 +1,20 @@
 <!--pages/brokenCrystal/brokenCrystal.wxml-->
-<text>pages/brokenCrystal/brokenCrystal.wxml</text>
+<view class="container">
+  <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+    <van-sidebar-item wx:for="{{ crystals }}" wx:key="name" title="{{ item.name }}" />
+  </van-sidebar>
+  <view class="content">
+    <van-panel title="涌火之地" class="panel">
+      <view class="panel-content">
+        <view wx:for="{{ crystals[activeKey].from.pyros }}" wx:key="index">{{ item }}</view>
+        <text wx:if="{{ crystals[activeKey].from.pyros.length === 0 }}" class="empty-data">暂无数据</text>
+      </view>
+    </van-panel>
+    <van-panel title="丰水之地" class="panel">
+      <view class="panel-content">
+        <view wx:for="{{ crystals[activeKey].from.hydatos }}" wx:key="index">{{ item }}</view>
+        <text wx:if="{{ crystals[activeKey].from.hydatos.length === 0 }}" class="empty-data">暂无数据</text>
+      </view>
+    </van-panel>
+  </view>
+</view>
