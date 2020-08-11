@@ -16,8 +16,8 @@
 }
 
 .disabled {
-  border: 2rpx solid #ccc;
-  background-color: #ccc;
+  border: 2rpx solid #f2f2f2;
+  background-color: #f2f2f2;
   color: #999;
 }
 

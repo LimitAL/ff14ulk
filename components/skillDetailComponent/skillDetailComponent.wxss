@@ -22,8 +22,8 @@
 .body {
   margin: 80rpx;
   border-radius: 14rpx;
-  background-color: #272627;
-  color: #fff;
+  background-color: #fff;
+  color: #666;
 }
 
 .header {

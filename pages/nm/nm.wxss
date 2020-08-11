@@ -31,17 +31,18 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #dfdfdf;
+  background-color: #f2f2f2;
   font-size: 28rpx;
 }
 
 .fate-item {
   margin: 20rpx;
   background-color: #fff;
+  box-shadow: 5px 5px 10px #999;
 }
 
 .fate-header {
-  padding: 20rpx;
+  padding: 10rpx 20rpx;
   justify-content: space-between;
   align-items: center;
 }
@@ -58,7 +59,7 @@
 
 .body {
   margin-top: 10rpx;
-  border-top: 2rpx solid #ccc;
+  border-top: 2rpx dashed #ccc;
   padding: 10rpx 20rpx;
   justify-content: space-between;
   font-size: 26rpx;

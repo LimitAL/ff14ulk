@@ -7,13 +7,13 @@
 .left {
   position: relative;
   width: 150rpx;
-  border-right: 2rpx solid #dfdfdf;
+  /* border-right: 2rpx solid #dfdfdf; */
 }
 
 .area-item {
   padding: 20rpx 0;
   text-align: center;
-  border-bottom: 2rpx solid #dfdfdf;
+  /* border-bottom: 2rpx solid #dfdfdf; */
 }
 
 .number-select {
@@ -21,7 +21,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10rpx 0;
+  padding: 30rpx 0;
   background-color: #1296db;
   color: #fff;
   text-align: center;
@@ -39,30 +39,34 @@
 }
 
 .now-time {
+  display: flex;
   padding: 10rpx 20rpx;
   justify-content: space-between;
   background-color: #fff;
-  box-shadow: 10rpx 10rpx 10rpx #ccc;
+  box-shadow: 5px 5px 10px #000;
 }
 
 .et-time {
-  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
   border-radius: 6rpx;
   background-color: #1296db;
   color: #fff;
+  width: 200rpx;
 }
 
 .clock-icon {
+  margin-right: 4px;
   width: 40rpx;
   height: 40rpx;
-  vertical-align: bottom;
 }
 
 .area-name {
-  border: 2rpx solid #1296db;
+  /* border: 2rpx solid #1296db; */
   border-radius: 6rpx;
   padding: 10rpx 20rpx;
-  color: #1296db;
+  color: #ff976a;
 }
 
 .scroll {
@@ -71,7 +75,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #dfdfdf;
+  background-color: #f2f2f2;
 }
 
 .item {
@@ -123,9 +127,9 @@
 .tips {
   position: relative;
   margin: 20rpx;
-  font-weight: 600;
   font-size: 34rpx;
-  color: #666;
+  color: #1989fa;
+  text-shadow: 2px 2px 4px #999;
 }
 
 .tip-near {
