@@ -10,4 +10,4 @@
 ![微信小程序码](https://static.arinsinfinity.com/ffxiv/miniprogram/ff14ulk_wx.jpg)
 
 QQ扫码
-![QQ小程序码](https://static.arinsinfinity.com/ffxiv/miniprogram/ff14ulk_qq.jpg)
+![QQ小程序码](https://static.arinsinfinity.com/ffxiv/miniprogram/ff14ulk_qq.png)
