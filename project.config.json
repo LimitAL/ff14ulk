@@ -1,126 +1,128 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": true,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"remoteDebugLogEnable": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.7.1",
-	"appid": "wx7ae6bc677990f5a6",
-	"projectname": "ff14ulk",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"qqappid": "1109632419",
-	"scripts": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/baimage/baimage",
-					"pathName": "pages/baimage/baimage",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/brokenCrystal/brokenCrystal",
-					"pathName": "pages/brokenCrystal/brokenCrystal",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/brokenCrystal/brokenCrystal",
-					"pathName": "pages/brokenCrystal/brokenCrystal",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/info/info",
-					"pathName": "pages/info/info",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/logs/logs",
-					"pathName": "pages/logs/logs",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/brokenCrystal/brokenCrystal",
-					"pathName": "pages/brokenCrystal/brokenCrystal",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/weather/weather",
-					"pathName": "pages/weather/weather",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/nm/nm",
-					"pathName": "pages/nm/nm",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.7.1",
+  "appid": "wx7ae6bc677990f5a6",
+  "projectname": "ff14ulk",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "qqappid": "1109632419",
+  "scripts": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/baimage/baimage",
+          "pathName": "pages/baimage/baimage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/brokenCrystal/brokenCrystal",
+          "pathName": "pages/brokenCrystal/brokenCrystal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/brokenCrystal/brokenCrystal",
+          "pathName": "pages/brokenCrystal/brokenCrystal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/info/info",
+          "pathName": "pages/info/info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/logs/logs",
+          "pathName": "pages/logs/logs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/brokenCrystal/brokenCrystal",
+          "pathName": "pages/brokenCrystal/brokenCrystal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/weather/weather",
+          "pathName": "pages/weather/weather",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/nm/nm",
+          "pathName": "pages/nm/nm",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
